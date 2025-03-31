@@ -1,0 +1,78 @@
+@use '../index.scss' as i;
+
+.app{
+    display: grid;
+    grid-template-columns: 1fr minmax(min-content, 42rem) 1fr minmax(min-content, 45rem) 1fr;
+    grid-template-rows: 55rem;
+    background-color: i.$color-heading-black;
+    // column-gap: 1fr;
+
+    @media only screen and (max-width: i.$bp-small){
+        grid-template-columns:1fr 45rem 1fr;
+        grid-template-rows: 35rem 47rem;
+    }
+
+    & img{
+            grid-column: 2/3;
+            width: 42rem;
+            align-self: end;
+            align-content: end;
+            justify-content: end;
+
+            @media only screen and (max-width: i.$bp-small){
+                grid-column: 2 / 3;
+                grid-row: 2 / 3;
+            }
+    }
+
+    &__header{
+        grid-column: 4/5;
+        align-content: center;
+
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        color: i.$color-white;
+        height: 100%;
+
+        @media only screen and (max-width: i.$bp-small){
+            grid-column: 2 / 3;
+            grid-row: 1 / 2;
+
+            gap: 2rem;
+        }
+
+        &--text{
+            grid-row: 2/3;
+            grid-column: 1/3;
+        }
+
+        &--logo1{
+            grid-row: 3/4;
+            grid-column: 1/2;
+        }
+
+        &--logo2{
+            grid-row: 3/4;
+            grid-column: 2/3;
+        }
+
+        
+
+        & h2{
+            text-align: start !important;
+            color: i.$color-white !important;
+        }
+
+        & P{
+            text-align: start !important;
+        }
+
+        & a{
+            & img{
+                width: 80%;
+            }
+
+        }
+    }
+}

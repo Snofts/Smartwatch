@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="src/img/favicon.png" type="image/x-icon" />
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>SmartWatch // Classic watches, Great functionality</title>
+  </head>
+
+  <body>
+    <div class="container">
+        <header class="header">
+            <img class="section__header header__logo" src="Images/Smartwatch-logo-black-removebg.png" alt="SmartWatch logo"/>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__list-home">
+                        <a href="#home">Home</a>
+                    </li>
+                    <li class="nav__list-product">
+                        <a href="#product">Product</a>
+                    </li>
+                    <li class="nav__list-features">
+                        <a href="#features">Features</a>
+                    </li>
+                    <li class="nav__list-reviews">
+                        <a href="#reviews">Reviews</a>
+                    </li>
+                    <li class="nav__list-contact">
+                        <a href="#contact">Contact</a>
+                    </li>
+                    <li class="nav__list-blog">
+                        <a href="#blog">Blog</a>
+                    </li>
+                    <a href="#popup" class="header__btn">Pre-order now</a>
+                </ul>
+            </nav>
+            <div class="nav__responsive--menu">
+                <svg >
+                    <use xlink:href="images/sprite.svg#icon-menu"></use>
+                </svg>
+            </div>
+            <nav class="nav__responsive">
+                <ul class="nav__responsive--list">
+                    <li class="nav__responsive--list-home">
+                        <a href="#home">Home</a>
+                    </li>
+                    <li class="nav__responsive--list-product">
+                        <a href="#product">Product</a>
+                    </li>
+                    <li class="nav__responsive--list-features">
+                        <a href="#features">Features</a>
+                    </li>
+                    <li class="nav__responsive--list-reviews">
+                        <a href="#reviews">Reviews</a>
+                    </li>
+                    <li class="nav__responsive--list-contact">
+                        <a href="#contact">Contact</a>
+                    </li>
+                    <li class="nav__responsive--list-blog">
+                        <a href="#blog">Blog</a>
+                    </li>
+                    <li class="nav__responsive--close">
+                        <svg >
+                            <use xlink:href="images/sprite.svg#icon-cross"></use>
+                        </svg>
+                    </li>     
+                </ul>
+            </nav>
+
+            <div class="nav__popup hidden" id="popup">
+                <div class="nav__popup--overlay"></div>
+                <div class="nav__popup--content">
+                    <div class="nav__popup--image">
+                        <img src="Images/Popup-image-1.png" alt="Blue Smart Watch">
+                    </div>
+                    <div class="nav__popup--description">
+                        <div class="nav__popup--description1">
+                            <h3>smart watch</h3>
+                            <h2>watch limited edition</h2>
+                            <h4>Model As1500</h4>
+                            <div class="nav__popup--price"><span class="nav__popup--orgprice">&#36;299</span>&nbsp;&nbsp;&nbsp; <span class="nav__popup--discount">&#36;290</span>&nbsp;&nbsp;&nbsp; <span class="nav__popup--pricedescription">Early bird offer</span></div>
+                        </div>
+                        <div class="nav__popup--description2 heading-paragraph">
+                            <p>8mm Silver Aluminum Case with Blue Sport Band. Its perfect fit for tracking fitness. 100% waterproof. Buy this limted edition sports edition.</p>
+                        </div>
+                        <div class="nav__popup--description3">
+                            <div class="description3__flex">
+                                <h4>Available colors</h4>
+                                <form>
+                                    <input type="radio" id="color_black" name="watch_color">
+                                    <input type="radio" id="color_green" name="watch_color">
+                                    <input type="radio" id="color_blue" name="watch_color">
+                                    <input type="radio" id="color_purple" name="watch_color">
+                                </form>
+                            </div>
+                            <div class="description3__flex">
+                                <h4>left</h4>
+                                <p>280 sold</p>
+                            </div>
+                            <div class="description3__flex">
+                                <h4>Available sizes</h4>
+                                <p>l, m, s, xs</p>
+                            </div>
+                        </div>
+                        <div class="nav__popup--checkout">
+                            <button class="checkout__btn">Checkout</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="nav__video">
+                <p>Your browser does not support the video tag.</p>
+                <video>
+                    <source src="https://vimeo.com/142705963">
+                    <type="video/mp4">
+                    <p>Your browser does not support the video tag.</p>
+                </video>
+            </div> -->
+            
+        </header>
+        <section class="banner">
+            <div class="banner__text animate__fadein">
+                <h1>The future of tech is here</h1>
+                <p>Holisticly incentivize revolutionary collaboration and idea <br> sharing before cost effective users. Actual focused services <br> before highly efficient human capital.</p>
+                <button class="banner__btn btn__blue" type="button">Play  <svg class="banner__btn--play"><use xlink:href="images/sprite.svg#icon-play2"></use></svg> Video</button>
+                <a href="#popup" class="banner__btn--order">Pre-order now</a>
+            </div>
+            <img class="banner__img animate__fadein" src="Images/apple-watch-1.png" alt="Smartwatch">
+        </section> 
+        <section class="product">
+            <div class="product__text section__heading animate__fadeinup">
+                <h2 class="heading-2">The product</h2>
+                <p class="heading-paragraph">Introduce the product here. A small description about what it is and how it helps the user. You can also add some photos below.</p>
+            </div>
+            <div class="product__showcase">
+                <div class="product__circle circle-1">+</div>
+                <div class="product__circle circle-2">+</div>
+                <div class="product__circle circle-3">+</div>
+                <div class="product__circle circle-4">+</div>
+                <img class="product__img" src="Images/apple-watch-2.png" alt="Smartwatch">
+                <div class="product__description hidden">
+                    <p class="product__description--text circle-1-text">+ metalic strap</p>
+                    <p class="product__description--text circle-2-text">+ Gps Tracker</p>
+                    <p class="product__description--text circle-3-text">+ bluetooth 4.2</p>
+                    <p class="product__description--text circle-4-text">+ Water Resistant</p>
+                </div>
+            </div>
+
+        </section>
+        <section class="work">
+            <div class="work__text section__heading">
+                <h2 class="heading-2">How it works</h2>
+                <p>Everybody loves tech gadgets, But our&#8217s is different. Here is how it works. Its should be simple. Add how easy is to install your product</p>
+            </div>
+            <div class="work__grid">
+                    <div class="work__grid--content work__grid--container1">
+                        <svg class="fa-solid fa-bluetooth">
+                            <use xlink:href="images/sprite.svg#icon-bluetooth"></use>
+                        </svg>
+                        <div class="icon__text">
+                            <h3>Connect Device</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur de elit, sed do tempor incididunt ut labore eta rehenderit in voluptate velit.</p>
+                        </div>
+                    </div>
+                    <div class="work__grid--content work__grid--container2">
+                        <svg class="fa-solid fa-gears">
+                            <use xlink:href="images/sprite.svg#icon-cogs"></use>
+                        </svg>
+                        <div class="icon__text">
+                            <h3>Configure it</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur de elit, sed do tempor incididunt ut labore eta rehenderit in voluptate velit.</p>
+                        </div>
+                    </div>
+                    <div class="work__grid--content work__grid--container3">
+                        <svg class="fa-solid fa-trophy">
+                            <use xlink:href="images/sprite.svg#icon-trophy"></use>
+                        </svg>
+                        <div class="icon__text">
+                            <h3>Yay&#33; Done&#8228;</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur de elit, sed do tempor incididunt ut labore eta rehenderit in voluptate velit.</p>
+                        </div>
+                    </div>
+            </div>
+        </section>
+        <section class="benefits">
+            <div class="benefits__text section__heading">
+                <h2 class="heading-2">The benefits</h2>
+                <p>List out your product&#8217s benefit here. A small description about what it is and how it helps the user. You can also add some icons.</p>
+            </div>
+            <div class="benefits__items">
+                <div class="benefits__item benefits__list--1">
+                    <svg class="benefits__icon">
+                        <use xlink:href="images/sprite.svg#icon-location"></use>
+                    </svg>
+                    <h3 class="heading-3">GPS tracking</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
+                </div>
+                <div class="benefits__item benefits__list--2">
+                    <svg class="benefits__icon">
+                        <use xlink:href="images/sprite.svg#icon-heartbeat"></use>
+                    </svg>
+                    <h3 class="heading-3">Heartbeat Analysis</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
+                </div>
+                <div class="benefits__item benefits__list--3">
+                    <svg class="benefits__icon">
+                        <use xlink:href="images/sprite.svg#icon-lock"></use>
+                    </svg>
+                    <h3 class="heading-3">Security first</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
+                </div>
+                <div class="benefits__item benefits__list--4">
+                    <svg class="benefits__icon">
+                        <use xlink:href="images/sprite.svg#icon-light-bulb"></use>
+                    </svg>
+                    <h3 class="heading-3">Innovative idea</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
+                </div>
+                <div class="benefits__item benefits__list--5">
+                    <svg class="benefits__icon">
+                        <use xlink:href="images/sprite.svg#icon-wallet"></use>
+                    </svg>
+                    <h3 class="heading-3">Save your bill</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
+                </div>
+                <div class="benefits__item benefits__list--6">
+                    <svg class="benefits__icon">
+                        <use xlink:href="images/sprite.svg#icon-star"></use>
+                    </svg>
+                    <h3 class="heading-3">Proven technology</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
+                </div>
+            </div>
+        </section>
+        <section class="collection">
+                <div class="collection__heading section__heading">
+                    <h2 class="heading-2">Our collection</h2>
+                    <p class="heading-paragraph collection__heading--p">You are unique. You have unique style and you need a unique watch for you. Choose from our collection of watches.</p>
+                </div>
+                <div class="collection__display">
+                    <div class="collection__display--item collection__display--1">
+                        <img src="Images/Collection-watch-1.jpg" alt="Watch sport edition">
+                        <h4>Watch Sport Edition</h4>
+                        <p>smart watch</p>
+                        <p class="collection__display--price">$345</p>
+                        <button class="collection__display--item collection__display--btn" type="button">choose</button>
+                    </div>
+                    <div class="collection__display--item collection__display--2">
+                        <img src="Images/Collection-watch-2.jpg" alt="Watch original">
+                        <h4>Watch Original</h4>
+                        <p>smart watch</p>
+                        <p class="collection__display--price">$294</p>
+                        <button class="collection__display--btn" type="button">choose</button>
+                    </div>
+                    <div class="collection__display--item collection__display--3">
+                        <img src="Images/Collection-watch-3.jpg" alt="Watch bracelet">
+                        <h4>Watch Bracelet</h4>
+                        <p>smart watch</p>
+                        <p class="collection__display--price">$345</p>
+                        <button class="collection__display--btn" type="button">choose</button>
+                    </div>
+                    <div class="collection__display--item collection__display--4">
+                        <img src="Images/Collection-watch-4.jpg" alt="Watch limited edition">
+                        <h4>Watch Limited Edition</h4>
+                        <p>smart watch</p>
+                        <p class="collection__display--price">$290</p>
+                        <button class="collection__display--btn" type="button">choose</button>
+                    </div>
+                </div>
+        </section>
+        <section class="watch__grid">
+            <div class="watch">
+                <div class="watch__text">
+                    <div class="watch__text--header section__heading">
+                        <h2 class="heading-2">The watch</h2>
+                        <p>With an image in the side of this conetent, you can use this section to write about some cool thing about your product or its features.</p>
+                    </div>
+                    <ul class="watch__list">
+                        <li class="watch__list--item">
+                            <svg class="benefits__icon watch__list--icon">
+                                <use xlink:href="images/sprite.svg#icon-check-circle"></use>
+                            </svg>
+                            <p>&nbsp;&nbsp;Compatible with all devices</p>
+                        </li>
+                        <li class="watch__list--item">
+                            <svg class="benefits__icon watch__list--icon">
+                                <use xlink:href="images/sprite.svg#icon-check-circle"></use>
+                            </svg>
+                            <p>&nbsp;&nbsp;Android and iOS Support</p>
+                        </li>
+                        <li class="watch__list--item">
+                            <svg class="benefits__icon watch__list--icon">
+                                <use xlink:href="images/sprite.svg#icon-check-circle"></use>
+                            </svg>
+                            <p>&nbsp;&nbsp;Activity & Health Tracker</p>
+                        </li>
+                        <li class="watch__list--item">
+                            <svg class="benefits__icon watch__list--icon">
+                                <use xlink:href="images/sprite.svg#icon-check-circle"></use>
+                            </svg>
+                            <p>&nbsp;&nbsp;Read & reply to messages</p>
+                        </li>
+                    </ul>
+                </div>
+                <img src="Images/the-watch.png" alt="Watch Image">
+            </div>  
+        </section>
+
+        <section class="gallery">
+            <img class="gallery__img1" src="Images/Gallery-1.jpg" alt="Watch on hand">
+            <div class="gallery__text--container1">
+                <div class="gallery__text--1">
+                    <h2>Health and Fitness</h2>
+                    <p>Fitness isn&#8217t just about running, biking, or hitting the gym. It&#8217s also about being active throughout the day. Watch measures all the ways you move, such as walking the dog, taking the stairs, or playing with your kids. It even keeps track of when you stand up.</p>
+                </div>
+            </div>
+            <div class="gallery__text--container2">
+                <div class="gallery__text--2">
+                    <h2>Every Apps you wanted</h2>
+                    <p>You won&#8217t just send and receive messages, calls, and mail more easily and efficiently. You&#8217ll express yourself in unique, fun, and more personal ways. Communicating with Watch is discreet, sophisticated, and nuanced. a whole new way to connect with others.</p>
+                </div>
+            </div>
+            <img class="gallery__img2" src="Images/Gallery-2.jpg" alt="Watch on hand">
+        </section>
+        <section class="review">
+            <div class="review__header">
+                <h2 class="heading-2">review</h2>
+                <p class="heading-paragraph">Don&#8217t take our word, See what our experts says about the watch. We have got over 1000s of positive reviews.</p>
+            </div>
+            <div class="review__content">
+                <div class="review__post review__1">
+                    <div>
+                        <svg class="review__icon">
+                            <use xlink:href="images/sprite.svg#icon-quotes-left"></use>
+                        </svg>
+                    </div>
+                    <div>
+                        <p class="review__paragraph">The Watch is the nicest smartwatch available, but it&#8217s more status symbol than wearable revolutionary. Most of the Watch&#8217s features are great.</p>
+                    </div>
+                    <div>
+                        <img src="Images/reviewer1.png" alt="">
+                    </div>
+                </div>
+                <div class="review__post review__2">
+                    <div>
+                        <svg class="review__icon">
+                            <use xlink:href="images/sprite.svg#icon-quotes-left"></use>
+                        </svg>
+                    </div>
+                    <div>
+                        <p class="review__paragraph">Watch is the most ambitious, well constructed smartwatch ever seen, but first-gen shortfalls make it feel more like a fashionable toy than a necessary tool.</p>
+                    </div>
+                    <div>
+                        <img src="Images/reviewer2.png" alt="">
+                    </div>
+                    
+                </div>
+                <d class="review__post review__3">
+                    <div>
+                        <svg class="review__icon">
+                            <use xlink:href="images/sprite.svg#icon-quotes-left"></use>
+                        </svg>
+                    </div>
+                    <div>
+                        <p class="review__paragraph">Watch is the best smartwatch we&#8217ve used, and the first that feels friendly and has character. Watch OS 2.0 adds needed app and Siri abilities.</p>
+                    </div>
+                    <div>
+                        <img src="Images/reviewer3.png" alt="">
+                    </div>
+            </div>
+            <div class="review__featured">
+                <div class="review__featured--text">
+                    <h4>As Featured on</h4>
+                </div>
+                <div class="review__featured--logos">
+                    <img src="Images/featured1.png" alt="Tech launch logo">
+                    <img src="Images/reviewer1.png" alt="Tech company logo">
+                    <img src="Images/featured3.png" alt="Smart review logo">
+                    <img src="Images/featured4.png" alt="Mobworld logo">
+                    <img src="Images/featured5.png" alt="First post logo">
+                    <img src="Images/featured6.png" alt="Startup 100 logo">
+                </div>
+            </div>
+        </section>
+        <section class="faq">
+            <div class="faq__header section__heading">
+                <h2 class="heading-2">FAQ</h2>
+                <p class="heading-paragraph">Got questions? We&#8217ve got answers. If you have some other questions, feel free to send us an email to</p>
+            </div>
+            <div class="faq__qa faq__qa--1">
+                <h3>What is Watch? How it works?</h3>
+                <p>Watch took center stage at this year's Product Show with a preview of watch OS 2. The next generation of Watch software is packed with features that just might turn the device from a nice-to-have into a must-have. If you already own an Apple Watch, you'll have to live with the old software until fall. You&#8217ll love it at the first use.
+                </p>
+            </div>
+            <div class="faq__qa faq__qa--2">
+                <h3>How the watch is made?</h3>
+                <p>Watch has an anodized aluminum case (which is lighter than stainless steel) in silver or space gray, and the face is Ion-X glass, which also designed to be hard and rugged (as well as a little bit lighter) than the sapphire. It&#8217s definitely the lightest of the three Apple Watch editions, making it an ideal exercise companion.</p>
+            </div>
+            <div class="faq__qa faq__qa--3">
+                <h3>Can I swap out the watch band?</h3>
+                <p>Absolutely. Watch comes with six bands that are easy to mix and match any band with any watch. You can swap them out as your heart desires without the aid of any tools—as long as the band and watch are the same size. (The Leather Loop band, for example, only fits 42mm watches, not the smaller 38mm size).</p>
+            </div>
+            <div class="faq__qa faq__qa--4">
+                <h3>So it&#8217s a watch and a fitness tracker?</h3>
+                <p>The accelerometer lets the watch count your steps, and it extrapolate distance on its own, or rely on the GPS in the paired Phone to trace your exact route. That step data comes in handy for two of the apps included on the watch: Activity and Workout. Both of the watch&#8217s fitness apps sync data back to the Health and Fitness apps on your Phone.</p>
+            </div>
+        </section>
+        <section class="spec">
+            <div class="section__heading spec__header">
+                <h2 class="heading-2">Tech specs</h2>
+                <p class="heading-paragraph">Need more info? Please have a look at the tech specs of the watch. We&#8217ve used Latest technology & quality materials</p>
+            </div>
+            <div class="spec__item spec__item--1">
+                <h3 class="heading-3">Compatibility</h3>
+                <ul class="spec__item--list">
+                    <li>iPhone iOS 7 & up</li>
+                    <li>Android 4.3 & uptexts</li>
+                    <li>Bluetooth 4.0</li>
+                    <li>Notification for calls / texts</li>
+                </ul>
+            </div>
+            <div class="spec__item spec__item--2">
+                <h3 class="heading-3">App</h3>
+                <ul class="spec__item--list">
+                    <li>iPhone iOS 7 & up</li>
+                    <li>Android 4.3 & uptexts</li>
+                    <li>Bluetooth 4.0</li>
+                    <li>Notification for calls / texts</li>
+                </ul>
+            </div>
+            <div class="spec__item spec__item--3">
+                <h3 class="heading-3">Vibration silent alarms</h3>
+                <ul class="spec__item--list">
+                    <li>iPhone iOS 7 & up</li>
+                    <li>Android 4.3 & uptexts</li>
+                    <li>Bluetooth 4.0</li>
+                    <li>Notification for calls / texts</li>
+                </ul>
+            </div>
+            <div class="spec__item spec__item--4">
+                <h3 class="heading-3">Watch</h3>
+                <ul class="spec__item--list">
+                    <li>iPhone iOS 7 & up</li>
+                    <li>Android 4.3 & uptexts</li>
+                    <li>Bluetooth 4.0</li>
+                    <li>Notification for calls / texts</li>
+                </ul>
+            </div>
+            <div class="spec__item spec__item--5">
+                <h3 class="heading-3">Strap</h3>
+                <ul class="spec__item--list">
+                    <li>iPhone iOS 7 & up</li>
+                    <li>Android 4.3 & uptexts</li>
+                    <li>Bluetooth 4.0</li>
+                    <li>Notification for calls / texts</li>
+                </ul>
+            </div>
+            <div class="spec__item spec__item--6">
+                <h3 class="heading-3">Activity tracking</h3>
+                <ul class="spec__item--list">
+                    <li>iPhone iOS 7 & up</li>
+                    <li>Android 4.3 & uptexts</li>
+                    <li>Bluetooth 4.0</li>
+                    <li>Notification for calls / texts</li>
+                </ul>
+            </div>
+            <div class="spec__item spec__item--7">
+                <h3 class="heading-3">Timekeeping</h3>
+                <ul class="spec__item--list">
+                    <li>Swiss ETA movement</li>
+                    <li>Accurate, reliable</li>
+                </ul>
+            </div>
+            <div class="spec__item spec__item--8">
+                <h3 class="heading-3">Battery powwer</h3>
+                <ul class="spec__item--list">
+                    <li>Standard CR2025 6+ months</li>
+                    <li>Standard 364 for timekeeping 5+ years</li>
+                    <li>Solar Power available as aupgrade</li>
+                </ul>
+            </div>
+            <div class="spec__item spec__item--9">
+                <h3 class="heading-3">Sensors</h3>
+                <ul class="spec__item--list">
+                    <li>MEMS 3-axis accelerometer</li>
+                    <li>Highly accurate</li>
+                    <li>Low power consumption</li>
+                </ul>
+            </div>
+        </section>
+        <section class="team">
+            <div class="team__header section__heading">
+                <h2 class="heading-2">Meet the team</h2>
+                <P class="heading-paragraph">We are a small group of inverntors, hackers and designers from the differrent parts of the world on a mission.</P>
+            </div>
+            <div class="team__list">
+                <div class="team__member team__member--1">
+                    <img src="Images/Co-Founder and CEO.png" alt="Co-Founder and CEO">
+                    <h3 class="heading-3">Gary Elliott</h3>
+                    <p>Co-Founder and CEO</p>
+
+                    <div class="team__member--icon member__icon--1 icon__1--open">
+                        <svg>
+                            <use xlink:href="images/sprite.svg#icon-menu"></use>
+                        </svg>
+                    </div>
+                    <div class="team__member--icon-close member__icon--1 icon__1--close">
+                        <svg>
+                            <use xlink:href="images/sprite.svg#icon-cross"></use>
+                        </svg>
+                        <svg>
+                            <use xlink:href="images/sprite.svg#icon-facebook-with-circle"></use>
+                        </svg>
+                        <svg>
+                            <use xlink:href="images/sprite.svg#icon-twitter-with-circle"></use>
+                        </svg>
+                        <svg>
+                            <use xlink:href="images/sprite.svg#icon-linkedin-with-circle"></use>
+                        </svg>
+                        <svg>
+                            <use xlink:href="images/sprite.svg#icon-youtube-with-circle"></use>
+                        </svg>
+                    </div>
+                </div>
+                <div class="team__member team__member--2">
+                    <img src="Images/Co-Founder and CTO.png" alt="Co-Founder and CTO">
+                    <h3 class="heading-3">Allen Jeffery</h3>
+                    <p>Co-Founder and CTO</p>
+
+                    <div class="team__member--icon member__icon--2 icon__2--open">
+                        <svg>
+                            <use xlink:href="images/sprite.svg#icon-menu"></use>
+                        </svg>
+                    </div>
+                    <div class="team__member--icon-close member__icon--2 icon__2--close">
+                        <svg>
+                            <use xlink:href="images/sprite.svg#icon-cross"></use>
+                        </svg>
+                        <svg>
+                            <use xlink:href="images/sprite.svg#icon-facebook-with-circle"></use>
+                        </svg>
+                        <svg>
+                            <use xlink:href="images/sprite.svg#icon-twitter-with-circle"></use>
+                        </svg>
+                        <svg>
+                            <use xlink:href="images/sprite.svg#icon-linkedin-with-circle"></use>
+                        </svg>
+                        <svg>
+                            <use xlink:href="images/sprite.svg#icon-youtube-with-circle"></use>
+                        </svg>
+                    </div>
+                </div>
+                <div class="team__member team__member--3">
+                    <img src="Images/Lead Developer, Hacker.png" alt="Lead Developer, Hacker">
+                    <h3 class="heading-3">Albert Castro</h3>
+                    <p>Lead Developer, Hacker</p>
+
+                    <div class="team__member--icon member__icon--3 icon__3--open">
+                        <svg>
+                            <use xlink:href="images/sprite.svg#icon-menu"></use>
+                        </svg>
+                    </div>
+                    <div class="team__member--icon-close member__icon--3 icon__3--close">
+                        <svg>
+                            <use xlink:href="images/sprite.svg#icon-cross"></use>
+                        </svg>
+                        <svg>
+                            <use xlink:href="images/sprite.svg#icon-facebook-with-circle"></use>
+                        </svg>
+                        <svg>
+                            <use xlink:href="images/sprite.svg#icon-twitter-with-circle"></use>
+                        </svg>
+                        <svg>
+                            <use xlink:href="images/sprite.svg#icon-linkedin-with-circle"></use>
+                        </svg>
+                        <svg>
+                            <use xlink:href="images/sprite.svg#icon-youtube-with-circle"></use>
+                        </svg>
+                    </div>
+                </div>
+                <div class="team__member team__member--4">
+                    <img src="Images/3D Designer & Prototyper.png" alt="3D Designer & Prototyper">
+                    <h3 class="heading-3">Sara Mendez</h3>
+                    <p>3D Designer & Prototyper</p>
+
+                    <div class="team__member--icon member__icon--4 icon__4--open">
+                        <svg>
+                            <use xlink:href="images/sprite.svg#icon-menu"></use>
+                        </svg>
+                    </div>
+                    <div class="team__member--icon-close member__icon--4 icon__4--close">
+                        <svg>
+                            <use xlink:href="images/sprite.svg#icon-cross"></use>
+                        </svg>
+                        <svg>
+                            <use xlink:href="images/sprite.svg#icon-facebook-with-circle"></use>
+                        </svg>
+                        <svg>
+                            <use xlink:href="images/sprite.svg#icon-twitter-with-circle"></use>
+                        </svg>
+                        <svg>
+                            <use xlink:href="images/sprite.svg#icon-linkedin-with-circle"></use>
+                        </svg>
+                        <svg>
+                            <use xlink:href="images/sprite.svg#icon-youtube-with-circle"></use>
+                        </svg>
+                    
+                </div>
+            
+            </div>
+            </div>
+        </section>
+        <section class="timeline">
+             <div class="timeline__header section__heading">
+                <h2 class="heading-2">Timeline</h2>
+                <p class="heading-paragraph">Here&#8217s a roadmap of our product to highlight the milestones from the initial phase to delivery and future updates.</p>
+             </div>
+             <div class="timeline__schedule">
+                <div class="timeline__schedule--header">
+                    <div>
+                        <p>Now</p>
+                    </div>
+                        
+                </div>
+                <div class="timeline__schedule--date1 date">
+                    <p>23 JAN 2014</p>
+                    <p class="date__dot date__dot--1">&#8226</p>
+                </div>
+                <div class="timeline__schedule--task1 task">
+                    <p>Mass production</p>
+                </div>
+                <div class="timeline__schedule--date2 date">
+                    <p>23 JAN 2014</p>
+                    <p class="date__dot date__dot--2">&#8226</p>
+                </div>
+                <div class="timeline__schedule--task2 task">
+                    <p>Testing Pre-Production Samples</p>
+                </div>
+                <div class="timeline__schedule--date3 date">
+                    <p>23 JAN 2014</p>
+                    <p class="date__dot date__dot--3">&#8226</p>
+                </div>
+                <div class="timeline__schedule--task3 task">
+                    <p>Croudfunding Campaign</p>
+                </div>
+                <div class="timeline__schedule--date4 date">
+                    <p>23 JAN 2014</p>
+                    <p class="date__dot date__dot--4">&#8226</p>
+                </div>
+                <div class="timeline__schedule--task4 task">
+                    <p>Preview at CES</p>
+                </div>
+                <div class="timeline__schedule--date5 date">
+                    <p>23 JAN 2014</p>
+                    <p class="date__dot date__dot--5">&#8226</p>
+                </div>
+                <div class="timeline__schedule--task5 task">
+                    <p>3D Prototype & Testing</p>
+                </div>
+                <div class="timeline__schedule--date6 date">
+                    <p>23 JAN 2014</p>
+                    <p class="date__dot date__dot--6">&#8226</p>
+                </div>
+                <div class="timeline__schedule--task6 task">
+                    <p>Research and Development</p>
+                </div>
+                <div class="timeline__schedule--footer">
+                    <p>Idea</p>
+                </div>
+             </div>
+        </section>
+        <section class="app">
+            <img src="Images/app-screen.png" alt="App Download">
+            <div class="app__header">
+                <div class="app__header--text">
+                    <h2 class="heading-2">Mobile App for watch</h2>
+                <p class="heading-paragraph">The smartwatch connects to your iPhone and other iOS devices using Bluetooth, alerting you to incoming calls, emails, messages and alerts. Customize your with over 1,000 watchapps found within the smartwatch app.</p>
+                </div>
+                <a href="#" class="app__header--logo1">
+                    <img src="Images/app-store.png" alt="App store logo">
+                </a>
+                <a href="#" class="app__header--logo2">
+                    <img src="Images/google-play.png" alt="Google play logo">
+                </a>
+                
+            </div>
+        </section>
+        <section class="newsletter">
+            <div class="newsletter__header section__heading">
+                <h2 class="heading-2">Newsletter</h2>
+                <p class="heading-paragraph">Subscribe to our product newsletter to get notified when we launch the product or when we completed a milestone</p>
+            </div>
+            <form action="">
+                <div class="newsletter__form">
+                        <input type="text" id="email" name="email" placeholder="Enter your email address">
+                    <button id="submit" type="submit">
+                        <!-- > -->
+                        <svg class="submit__icon">
+                            <use xlink:href="images/sprite.svg#icon-chevron-thin-right"></use>
+                        </svg>
+                    </button>
+                </div>
+            </form>
+        </section>
+        <section class="map">
+            <div class="map__display">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3170.3385769549286!2d-122.06400902462245!3d37.381824534699135!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fb6dfd0db40f7%3A0xdd71bb02633728bf!2s523%20Sylvan%20Ave%2C%20Mountain%20View%2C%20CA%2094041%2C%20USA!5e0!3m2!1sen!2sng!4v1739449867725!5m2!1sen!2sng" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <!-- <div class="map__direction">
+                <div class="map__direction--header">
+                    <h4 class="map__direction--headertxt">Storey Ave</h4>
+                    <p class="map__direction--text">San Francisco, CA 94129</p>
+                </div>
+                <a href="" class="map__direction--link1">View larger map</a>
+                <a href="" class="map__direction--link2">
+                    <svg class="map__contact--side1--icon">
+                        <use xlink:href="images/sprite.svg#icon-address"></use>
+                    </svg>
+                    <span>Directions</span>
+                </a>
+            </div> -->
+            <div class="map__contact">
+                <div class="map__contact--side1">
+                    <h3 class="heading-3 map__contact--side1--header">Get in touch</h3>
+                <div class="map__contact--side1--address">
+                    <svg class="map__contact--side1--icon">
+                        <use xlink:href="images/sprite.svg#icon-location"></use>
+                    </svg>
+                    <p>523 Sylvan Ave, 5th Floor <br> Mountain View, CA 94041USA</p>
+                </div>
+                <div class="map__contact--side1--number">
+                    <svg class="map__contact--side1--icon">
+                        <use xlink:href="images/sprite.svg#icon-phone"></use>
+                    </svg>
+                    <p>+1 (234) 56789 <br> +1 987 654 3210 
+                    </p>
+                </div>
+                <div class="map__contact--side1--email">
+                    <svg class="map__contact--side1--icon">
+                        <use xlink:href="images/sprite.svg#icon-mail"></use>
+                    </svg>
+                    <p>support@watchland.com</p>
+                </div>
+                <button type="button" class="map__contact--side1--button btn__blue">
+                    Contact us
+                </button>
+                </div>
+
+                <div class="map__contact--side2">
+                    Back
+                </div>
+                
+            </div>
+        </section>
+        <footer class="footer">
+            <div class="footer__icon">
+                <svg class="footer__icon--social footer_icon--facebook">
+                    <use xlink:href="images/sprite.svg#icon-facebook-with-circle"></use>
+                </svg>
+                <svg class="footer__icon--social footer__icon--twitter">
+                    <use xlink:href="images/sprite.svg#icon-twitter-with-circle"></use>
+                </svg>
+                <svg class="footer__icon--social footer__icon--linkedin">
+                    <use xlink:href="images/sprite.svg#icon-linkedin-with-circle"></use>
+                </svg>
+                <svg class="footer__icon--social footer__icon--youtube">
+                    <use xlink:href="images/sprite.svg#icon-youtube-with-circle"></use>
+                </svg>
+                <svg class="footer__icon--social footer__icon--google">
+                    <use xlink:href="images/sprite.svg#icon-google-with-circle"></use>
+                </svg>
+                <svg class="footer__icon--social footer__icon--pinterest">
+                    <use xlink:href="images/sprite.svg#icon-pinterest-with-circle"></use>
+                </svg>
+            </div>
+            <div class="footer__menu">
+                <ul class="footer__menu--list">
+                    <li>Presskit</li>
+                    <li>Mobile App</li>
+                    <li>Privacy Policy</li>
+                    <li>About</li>
+                    <li>Term of Use</li>
+                </ul>
+                <p class="footer__menu--copyright">Copyright &#169;Ninetheme. Proland. All rights reserved</p>
+            </div>
+        </footer>
+    </div>
+  </body>
+</html>

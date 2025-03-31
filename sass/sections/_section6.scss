@@ -1,0 +1,99 @@
+@use '../index.scss' as i;
+
+.watch__grid{
+    display: grid;
+    grid-template-columns: 1fr repeat(1, minmax(50rem, 85rem)) 1fr;
+
+    @media only screen and (max-width: i.$bp-small){
+        grid-template-columns: 1fr 3fr 1fr;
+    }
+}
+
+.watch{
+    grid-column: 2 / 3;
+
+    display: grid;
+    grid-template-columns: minmax(min-content, 2fr) minmax(min-content, 1fr);
+    justify-content: space-around;
+    // justify-content: center;
+    align-items: center;
+    padding: 12rem 0rem 9rem 0rem;
+    min-height: 70rem;
+    gap: 3rem;
+    // width: 80%;
+
+    @media only screen and (max-width: i.$bp-small){
+        grid-template-columns: minmax(min-content, 1fr);
+        grid-template-rows: 60rem 40rem;
+        justify-content: center;
+        align-content: center;
+        padding: 5rem 0rem 5rem 0rem;
+    }
+
+
+    & h2{
+        text-align: start !important;
+    }
+    
+    & p{
+        font-size: 1.7rem;
+        color: i.$color-textparagraph;
+    }
+
+    &__text{
+        height: 70%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-content: center;
+
+        @media only screen and (max-width: i.$bp-medium){
+            height: 50%;
+        }
+
+        @media only screen and (max-width: i.$bp-small){
+            grid-row: 2 / 3;
+            align-self: self-start;
+            height: 90%;
+        }
+
+        &--header::after{
+        justify-self: start !important;
+        }
+
+        &--header p{
+            width: 100%;
+        }
+    }
+
+    &__list{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        list-style: none;
+        height: 40%;
+
+        &--item{
+            display: flex;
+            flex-direction: row;
+            // color:
+        }
+
+        &--icon{
+            fill: i.$color-icon-green !important;
+        }
+    }
+
+    & img{
+        height: 100%;
+
+        @media only screen and (max-width: i.$bp-medium){
+            height: 80%;
+        }
+
+        @media only screen and (max-width: i.$bp-small){
+            grid-row: 1 / 2;
+            justify-self: center;
+        }
+    }
+}

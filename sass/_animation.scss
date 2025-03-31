@@ -1,0 +1,67 @@
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.animate__fadein{
+    animation: fadeInAnimation ease 3s;
+    transition: all 3s;
+}
+
+@keyframes fadeInUpAnimation {
+    0% {
+        transform: translate3d(0, 5rem, 0);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+    }
+}
+
+.animate__fadeinup{
+    animation: fadeInUpAnimation ease 3s;
+    transition: all 3s;
+    
+}
+
+@keyframes fadeInRightAnimation {
+    0% {
+        transform: translateX(10rem);
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes doublePulse{
+    0% {
+        transform: scale(1);
+      }
+
+    50% {
+        transform: scale(1.1);
+    }
+    
+    100% {
+        transform: scale(1);
+    }
+}

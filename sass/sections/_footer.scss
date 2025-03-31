@@ -1,0 +1,59 @@
+@use '../index.scss' as i;
+
+.footer{
+    display: grid;
+    grid-template-rows: repeat(2, 10rem);
+
+    justify-content: space-around;
+
+    & svg{
+        width: 4rem;
+        margin-left: 2rem;
+        fill: i.$color-blue-dark;
+
+        &:hover{
+            fill: i.$color-textparagraph;
+        }
+    }
+
+    &__icon{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    &__menu{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 50rem;
+
+       text-align: center;
+       font-size: 1.3rem;
+
+        &--list{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between; 
+            color: i.$color-blue-dark;
+
+            @media only screen and (max-width: i.$bp-smaller){
+                margin: 0rem 3rem 0rem 3rem;
+            }
+
+        }
+        
+        & ul li:hover{
+            color: i.$color-textparagraph;
+        }
+
+        & ul li:first-child{
+            list-style: none;
+        }
+
+        &--copyright{
+            color: i.$color-textparagraph;
+        }
+    }
+    
+}

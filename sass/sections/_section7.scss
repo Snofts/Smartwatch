@@ -1,0 +1,77 @@
+@use '../index.scss' as i;
+
+.gallery{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+
+    @media only screen and (max-width: i.$bp-small){
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 30rem 1fr 30rem;
+
+        &__img1{
+            grid-row: 1 / 2;
+        }
+
+        &__img2{
+            grid-row: 3 / 4;
+        }
+    }
+
+    & img{
+        width: 100%;
+        min-height: 100%;
+    }
+
+    & h2{
+        font-size: 2.5rem;
+        margin-bottom: 3rem;
+    }
+
+    & p{
+        font-size: 1.5rem;
+        color: i.$color-textparagraph;
+    }
+
+    &__text{
+
+        &--container1,
+        &--container2{
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            grid-template-rows: 1fr;
+        }
+
+        @media only screen and (max-width: i.$bp-small){
+            &--container1{
+                grid-row: 2/3;
+            }
+
+            &--container2{
+                grid-row: 4 / 5;
+            }
+        }
+
+        &--1{
+            display: grid;
+            align-content: center;
+
+            grid-column: 2 / 10;
+        }
+
+        &--2{
+            display: grid;
+            align-content: center;
+
+            grid-column: 4 / 12;
+
+            @media only screen and (max-width: i.$bp-small){
+                grid-column: 2 / 10;
+            }
+        }
+    }
+
+    
+
+    
+}

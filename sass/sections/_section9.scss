@@ -1,0 +1,90 @@
+@use '../index.scss' as i;
+
+.faq{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(3, minmax(20rem, 1fr)); // 20rem
+    align-content: space-around;
+    justify-content: space-around;
+    gap: 3rem;
+    
+    @media only screen and (max-width: i.$bp-small){
+        grid-template-rows: minmax(20rem, 1fr) repeat(4, minmax(5rem, 15rem));
+        gap: 2rem;
+    }
+
+    &__header{
+        grid-row: 1/2;
+        grid-column: 2/6;
+        align-content: end;
+
+        & p{
+            width: 70%;
+            justify-self: center;
+
+            @media only screen and (max-width: i.$bp-small){
+                width: 90%;
+            }
+        }
+
+        
+    }
+
+    &__qa{
+        & h3{
+            font-size: 1.7rem;
+            font-weight: 500;
+        }
+
+        & p{
+            font-size: 1.2rem;
+            color: i.$color-textparagraph;
+        }
+    }
+
+    &__qa--1{
+        grid-row: 2/3;
+        grid-column: 2/4;
+        align-content: center;
+
+        @media only screen and (max-width: i.$bp-small){
+            grid-column: 2/6;
+        }
+    }
+
+    &__qa--2{
+        grid-row: 2/3;
+        grid-column: 4/6;
+        align-content: center;
+
+        
+        @media only screen and (max-width: i.$bp-small){
+            grid-row: 3/4;
+            grid-column: 2/6;
+        }
+    }
+
+    &__qa--3{
+        grid-row: 3/4;
+        grid-column: 2/4;
+        align-content: start;
+
+        @media only screen and (max-width: i.$bp-small){
+            grid-row: 4/5;
+            grid-column: 2/6;
+            align-content: center;
+        }
+    }
+
+    &__qa--4{
+        grid-row: 3/4;
+        grid-column: 4/6;
+        align-content: start;
+
+        @media only screen and (max-width: i.$bp-small){
+            grid-row: 5/6;
+            grid-column: 2/6;
+            align-content: center;
+        }
+    }
+}

@@ -1,0 +1,469 @@
+@use '../index.scss' as i;
+
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 6rem;
+    background: transparent;
+    padding-top: 2rem;
+    // position: sticky;
+    // top: 0;
+
+    @media only screen and (max-width: i.$bp-small){
+        justify-content: space-between;
+      }
+
+    &__logo{
+    display: block;
+    height: 11rem;
+
+    @media only screen and (max-width: i.$bp-small){
+        margin-left: 3rem;
+      }
+    }
+
+    
+    &__btn{
+        display: flex;
+        flex-direction: column;
+        width: 18%;
+        background-color: i.$color-orange;
+        border-radius: 5rem;
+        border-color: i.$color-orange;
+        border: none;
+        color: i.$color-white !important;
+        height: 3rem;
+        font-size: 1.3rem;
+        text-transform: uppercase;
+        font-weight: 500;
+        text-align: center;
+        justify-content: center;
+
+        &:hover{
+            background-color: i.$color-hover;
+        }
+    }
+
+    &__sticky{
+        position: sticky;
+        top: 0;
+        background-color: i.$color-white;
+        padding-top: 0rem;
+        height: 6.5rem;
+
+
+        &--logo{
+            display: block;
+            height: 9rem;
+        }
+    }
+}
+
+.nav{
+    width: 70%;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    z-index: 2;
+
+    @media only screen and (max-width: i.$bp-small){
+        display: none;
+      }
+
+
+    &__list{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+
+        list-style: none;
+
+        
+    }
+
+    &__list a{
+        text-decoration: none;
+        color: i.$color-textparagraph;
+        font-weight: 500;
+
+        &:hover{
+            color: i.$color-heading-black;
+        }
+    }
+
+    &__popup{
+        @include i.popup;
+        
+
+        &--overlay{
+            position: absolute;
+            z-index: 200;
+            background-color: i.$color-popup-overlay;
+            width: 100%;
+            height: 150vh;
+        }
+
+        &--overlay:active + nav__popup{
+            background-color: red;
+        }
+
+        &--content{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+
+            position: fixed;
+            top: 3rem;
+            left: 25rem;
+            background-color: #fff;
+            z-index: 400;
+            width: 60%;
+            height: 53rem;
+            box-shadow: 2rem 2rem 10rem -5rem;
+
+            & img{
+                display: flex;
+                justify-self: center;
+                align-self: center;
+                width: 60%;          
+            }
+
+        }
+
+        &--image{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background-color: i.$color-background-ash2;
+
+            height: 53rem;
+        }
+
+        &--description{
+            display: grid;
+            grid-template-rows: repeat(4, 1fr);
+            padding: 3rem;
+
+            & h2{
+                font-size: 2.6rem;
+                text-transform: uppercase;
+            }
+
+            & h3{
+                font-size: 1.6rem;
+                font-weight: 400;
+                text-transform: uppercase;
+                color: i.$color-textparagraph;
+            }
+
+            & h4{
+                font-size: 1.3rem;
+                font-weight: 400;
+                text-transform: uppercase;
+                color: i.$color-textparagraph;
+            }
+            
+        }
+
+        &--description1,
+        &--description2,
+        &--description3 {
+            border-bottom: 0.1rem solid i.$color-textparagraph;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+
+        &--description2{
+            display: flex;
+            justify-content: center;
+        }
+
+        &--description3{
+            display: grid;
+            grid-template-columns: 1fr 6rem 1fr;
+            grid-template-rows: 6rem;
+            gap: 1rem;
+            align-content: center;
+
+            #color_black{
+                accent-color: i.$color-heading-black; 
+                appearance: none;
+                width: 1.8rem;
+                height: 1.8rem;
+                border-radius: 50%;
+                background-color: i.$color-heading-black; 
+                z-index: 500;
+            }
+
+            #color_black:checked::before{
+                position: absolute;
+                display: block;
+                content: '';
+                background-color: i.$color-white;
+                width: 2.5rem;
+                height: 2.5rem;
+                border-radius: 50%;
+                border: 0.2rem solid i.$color-heading-black;
+                z-index: -100;
+                top: 33.45rem;
+                right: 32.8rem;
+            }
+
+            #color_green{
+                // position: fixed;
+                accent-color: i.$color-icon-green; 
+                appearance: none;
+                width: 1.8rem;
+                height: 1.8rem;
+                border-radius: 50%;
+                background-color: i.$color-icon-green; 
+                z-index: 500;
+            }
+    
+            #color_green:checked::before{
+                position: absolute;
+                display: block;
+                content: '';
+                background-color: i.$color-white;
+                width: 2.5rem;
+                height: 2.5rem;
+                border-radius: 50%;
+                border: 0.2rem solid i.$color-icon-green;
+                z-index: -100;
+                top: 33.45rem;
+                right: 30.75rem;
+            }
+
+            #color_blue{
+            // position: fixed;
+            accent-color: i.$color-blue; 
+            appearance: none;
+            width: 1.8rem;
+            height: 1.8rem;
+            border-radius: 50%;
+            background-color: i.$color-blue; 
+            z-index: 500;
+            }
+        
+            #color_blue:checked::before{
+                position: absolute;
+                display: block;
+                content: '';
+                background-color: i.$color-white;
+                width: 2.5rem;
+                height: 2.5rem;
+                border-radius: 50%;
+                border: 0.2rem solid i.$color-blue;
+                z-index: -100;
+                top: 33.45rem;
+                right: 28.67rem;
+            }
+
+            #color_purple{
+            // position: fixed;
+            accent-color: i.$color-purple; 
+            appearance: none;
+            width: 1.8rem;
+            height: 1.8rem;
+            border-radius: 50%;
+            background-color: i.$color-purple; 
+            z-index: 500;
+            }
+            
+            #color_purple:checked::before{
+                position: absolute;
+                display: block;
+                content: '';
+                background-color: i.$color-white;
+                width: 2.5rem;
+                height: 2.5rem;
+                border-radius: 50%;
+                border: 0.2rem solid i.$color-purple;
+                z-index: -100;
+                top: 33.45rem;
+                right: 26.595rem;
+            }
+        }
+
+        &--checkout{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+
+        &--price{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+        
+        &--orgprice{
+            text-decoration: line-through;
+            font-size: 2rem;
+            color: i.$color-textparagraph;
+        }
+
+        &--discount{
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: i.$color-blue;
+        }
+
+        &--pricedescription{
+            display: inline-block;
+            justify-self: start;
+            background-color: i.$color-orange;
+            color: i.$color-white;
+            text-align: center;
+            text-transform: uppercase;
+            font-size: 1rem;
+            font-weight: 600;
+            width: 10rem;
+            border-radius: 0.4rem;
+
+        }
+
+        & p{
+            color: i.$color-textparagraph;
+            font-size: 1.2rem;
+            font-weight: 300;
+            text-align: justify;
+        }
+    }
+
+    &__video{
+        @include i.popup;
+
+        & video{
+            width: 20%;
+        }
+    }
+
+}
+
+.description3__flex{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    & p{
+        text-transform: uppercase;
+        color: i.$color-blue;
+        font-weight: 500;
+    }
+}
+
+.checkout__btn{
+    background-color: i.$color-blue;
+    color: i.$color-white;
+    border: none;
+    width: 100%;
+    height: 60%;
+    font-size: 2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+
+    &:hover{
+        background-color: i.$color-hover;
+    }
+}
+
+.nav__responsive{
+    display: none;
+
+    @media only screen and (max-width: i.$bp-small){
+        display: none; //block
+        background-color: i.$color-white;
+        z-index: 10;
+        width: 30rem;
+        height: 177vh;
+        align-self: self-start;
+        margin-top: -2rem;
+
+        &--list{
+            display: grid;
+            grid-template-rows: repeat(6, 7rem);
+            grid-template-columns: 22rem 5rem;
+            list-style: none;
+            padding-left: 2rem;
+    
+    
+            & li{
+                align-content: center;
+                height: 100%;
+                border-bottom: solid 0.1rem;
+            }
+    
+            &-home{
+                grid-row: 1 / 2;
+                grid-column: 1 /3;
+            }
+    
+            &-product{
+                grid-row: 2 / 3;
+                grid-column: 1 /3;
+            }
+    
+            &-features{
+                grid-row: 3 / 4;
+                grid-column: 1 /3;
+            }
+    
+            &-reviews{
+                grid-row: 4 / 5;
+                grid-column: 1 /3;
+            }
+    
+            &-contact{
+                grid-row: 5 / 6;
+                grid-column: 1 /3;
+            }
+    
+            &-blog{
+                grid-row: 6/ 7;
+                grid-column: 1 /3;
+            }
+        }
+    
+        &--list a{
+            text-decoration: none;
+            font-size: 1.5rem;
+            color: i.$color-heading-black;
+    
+            &:active{
+                color: i.$color-textparagraph;
+            }
+        }
+    
+        &--close{
+            grid-row: 1 / 2;
+            grid-column: 2/3;
+        
+           
+    
+            & svg{
+                width: 40%;
+                height: 25%;
+            }
+        }
+      }
+    
+
+    &--menu{
+        display: none;
+
+        @media only screen and (max-width: i.$bp-small){
+            display: block;
+            z-index: 5;
+            width: 10rem;
+
+            & svg{
+                width: 30%;
+                height: 50%;
+            }
+        }
+        
+    }
+}

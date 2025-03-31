@@ -1,0 +1,105 @@
+@use '../index.scss' as i;
+
+.collection{
+
+    @include i.section-header;
+    background-color: i.$color-background-ash2;
+    min-height: 70rem;
+
+    @media only screen and (max-width: i.$bp-small){
+        min-height: 110rem;
+    }
+
+    &__heading{
+        @media only screen and (max-width: i.$bp-small){
+            margin: 5rem 0rem 5rem 0rem;
+        }
+    }
+
+    &__heading--p{
+        width: 70%;
+        justify-self: center;
+    }
+
+
+    &__display{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 30rem;
+        width: 80%;
+        gap: 2rem;
+
+        @media only screen and (max-width: i.$bp-medium){
+            width: 75%;
+        }
+
+        @media only screen and (max-width: i.$bp-small){
+            grid-template-columns: repeat(auto-fit, minmax(15rem, 25rem));
+            grid-template-rows: repeat(2, 35rem);
+            // width: 60%;
+            gap: 3rem;
+            justify-content: center;
+            margin-bottom: 5rem;
+        }
+        
+
+        &--item{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            
+            & img{
+                width: 90%;
+                // height: 20rem;
+            }
+
+            & h4 {
+                font-size: 1.4rem;
+                font-weight: 500;
+                color: i.$color-blue;
+                text-align: center;
+                
+            }
+
+            & p{
+                text-transform: uppercase;
+                color: i.$color-textparagraph;
+                font-size: 1rem;
+
+            }
+        }
+
+        &--price{
+            color: i.$color-orange !important;
+            font-size: 1.3rem !important;
+            font-weight: 600;
+        }
+
+        &--btn{
+            width: 30%;
+            height: 2rem;
+            border-style: solid;
+            border-color: i.$color-textparagraph;
+            border-radius: 5rem;
+            color: i.$color-textparagraph;
+            font-size: 1rem;
+            text-transform: uppercase;
+
+            @media only screen and (max-width: i.$bp-medium){
+                width: 40%;
+            }
+
+            @media only screen and (max-width: i.$bp-small){
+                width: 25%;
+            }
+            
+
+            &:hover{
+                background-color: i.$color-hover;
+                
+            }
+            
+        }
+    }
+}

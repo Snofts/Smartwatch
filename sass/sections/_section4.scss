@@ -1,0 +1,74 @@
+@use '../index.scss' as i;
+
+.benefits{
+    
+    @include i.section-header;
+    min-height: 57rem;
+    background-color: i.$color-background-ash;
+
+
+    & h2{
+        font-size: 3.5rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    &__text{
+
+        @media only screen and (max-width: i.$bp-small){
+            margin: 5rem 0rem 5rem 0rem;
+        }
+
+        & p{
+            font-size: 1.6rem;
+            text-align: center;
+            color: i.$color-textparagraph;
+            width: 70%;
+            justify-self: center;
+        }
+    }
+
+    &__items{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(15.1rem, 25rem)); //101.28rem
+        grid-template-rows: repeat(2, 1fr);
+        row-gap: 5rem;
+        column-gap: 2rem;
+        width: 70%;
+        align-content: space-around;
+        justify-content: space-around;
+
+        @media only screen and (max-width: i.$bp-largest){
+            width: 90%;
+        }
+
+        @media only screen and (max-width: i.$bp-small){
+            margin-bottom: 5rem;
+        }
+     
+    }
+
+    &__item{
+        display: grid;
+        grid-template-columns: min-content 1fr;
+        grid-template-rows: min-content 1fr;
+        column-gap: 1rem;
+
+
+        & p{
+            grid-column: 2/3;
+            grid-row: 2/3;
+
+            font-size: 1.1rem;
+            text-align: start;
+            color: i.$color-textparagraph;
+        }
+    }
+
+    &__icon{
+        fill: i.$color-blue;
+        height: 3rem;
+        width: 3rem;
+    }
+}

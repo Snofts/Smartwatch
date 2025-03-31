@@ -1,0 +1,145 @@
+@use '../index.scss' as i;
+
+.product{
+    @include i.section-header;
+
+    background-color: i.$color-background-ash;
+    height: 77rem;
+
+    &__text p{
+        width: 60%;
+        justify-self: center;
+    }
+
+
+    &__showcase{
+        width: 30rem;
+    }
+
+    & img{
+        width: 100%;
+        margin-top: -6rem;
+    }
+
+    &__circle{
+        background-color: i.$color-blue;
+        border-radius: 50%;
+        height: 2rem;
+        width: 2rem;
+        text-align: center;
+        color: i.$color-white;
+        z-index: 100;
+        position: relative;
+        font-size: 1.3rem;
+
+        animation: doublePulse 2s infinite, fadeInRightAnimation 2s;
+        transition: all 2s;
+    }
+
+    &__description{
+        height: 0rem;
+    }
+
+    &__description--text{
+        background-color: i.$color-orange;
+        color: i.$color-white !important;
+        font-size: 1.5rem !important;
+        text-transform: uppercase;
+        width: 15rem;
+        position: relative;
+        z-index: 100;
+        border-radius: 0.5rem;
+    }
+}
+
+.circle-1{
+    top: 8rem;
+    left: 27rem;
+
+    &::after{
+        display: block;
+        content: " ";
+        background-color: i.$color-blue;
+        width: 12rem;
+        height: 0.2rem;
+        position: relative;
+        top: -1.05rem;
+        left: 1.8rem;
+    }
+
+    &-text{
+        top: -37.65rem;
+        left: 40.8rem;
+        text-align: center;
+    }
+}
+
+.circle-2{
+    top: 13rem;
+    left: 5rem;
+
+    &::after{
+        display: block;
+        content: " ";
+        background-color: i.$color-blue;
+        width: 12rem;
+        height: 0.2rem;
+        position: relative;
+        top: -1rem;
+        left: -12rem;
+    }
+
+    &-text{
+        top: -33rem;
+        left: -22rem;
+        text-align: center;
+    }
+}
+
+.circle-3{
+    top: 19rem;
+    left: 19rem;
+
+    &::after{
+        display: block;
+        content: " ";
+        background-color: i.$color-blue;
+        width: 12rem;
+        height: 0.2rem;
+        position: relative;
+        top: -1.05rem;
+        left: 1.8rem;
+    }
+
+    &-text{
+        top: -27.2rem;
+        left: 32.8rem;
+        text-align: center;
+    }
+}
+
+.circle-4{
+    top: 27rem;
+    left: 1rem;
+
+    &::after{
+        display: block;
+        content: " ";
+        background-color: i.$color-blue;
+        width: 12rem;
+        height: 0.2rem;
+        position: relative;
+        top: -1rem;
+        left: -12rem;
+    }
+
+    &-text{
+        top: -19.5rem;
+        left: -26rem;
+        text-align: center;
+    }
+}
+
+
+
+
