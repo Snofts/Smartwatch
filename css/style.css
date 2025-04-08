@@ -1803,6 +1803,7 @@ body {
 .timeline__schedule--task1 {
   grid-column: 3/4;
   grid-row: 2/3;
+  display: grid;
   align-content: center;
   justify-items: center;
   position: relative;
@@ -1826,6 +1827,7 @@ body {
 .timeline__schedule--task2 {
   grid-column: 1/2;
   grid-row: 3/4;
+  display: grid;
   align-content: center;
   justify-items: center;
 }
@@ -1848,6 +1850,7 @@ body {
 .timeline__schedule--task3 {
   grid-column: 3/4;
   grid-row: 4/5;
+  display: grid;
   align-content: center;
   justify-items: center;
 }
@@ -1870,6 +1873,7 @@ body {
 .timeline__schedule--task4 {
   grid-column: 1/2;
   grid-row: 5/6;
+  display: grid;
   align-content: center;
   justify-items: center;
 }
@@ -1892,6 +1896,7 @@ body {
 .timeline__schedule--task5 {
   grid-column: 3/4;
   grid-row: 6/7;
+  display: grid;
   align-content: center;
   justify-items: center;
 }
@@ -1914,6 +1919,7 @@ body {
 .timeline__schedule--task6 {
   grid-column: 1/2;
   grid-row: 7/8;
+  display: grid;
   align-content: center;
   justify-items: center;
 }
