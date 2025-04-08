@@ -89,11 +89,11 @@ $bp-micro: 26.56rem; //425px
  }
 
  .section__heading{
-  display: block;
+  display: grid;
   justify-content: center;
  
   &::after{
-    display: block;
+    display: grid;
     content: " ";
     background-color: $color-background-ash2;
     width: 7rem;
