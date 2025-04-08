@@ -8,17 +8,28 @@
     padding-bottom: 7rem;
     // overflow: hidden;
 
-    @media only screen and (max-width: i.$bp-small){
-        min-height: 90rem;
+    @media only screen and (max-width: i.$bp-medium){
+        min-height: 85rem;
       }
 
-    @media only screen and (max-width: i.$bp-smaller){
-        min-height: 145rem;
+    @media only screen and (max-width: i.$bp-small){
+        min-height: 140rem;
     }
 
     &__header{
         grid-column: 3/8;
         align-content: center;
+
+        @media only screen and (max-width: i.$bp-micro){
+            grid-column: 2/9;
+        }
+
+        & p{
+            @media only screen and (max-width: i.$bp-micro){
+                max-width: 40rem;
+                justify-self: center;
+            }
+        }
     }
 
     &__list{
@@ -26,29 +37,30 @@
         grid-row: 2 / 3;
 
         display: grid;
-        // grid-template-columns: repeat(auto-fit, 20rem);
-        grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr)); //20rem
-        column-gap: 4rem;
+        grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr)); 
+        column-gap: clamp(1rem, 3vw, 4rem);
+        row-gap: 3rem;
         
 
-        @media only screen and (max-width: i.$bp-small){
+        @media only screen and (max-width: i.$bp-medium){
             grid-template-columns: repeat(auto-fit, minmax(10rem, 20rem));
             grid-template-rows: 1fr 1fr;
             gap: 4rem;
             justify-content: center;
           }
 
-          @media only screen and (max-width: i.$bp-smaller){
-            grid-template-columns: repeat(auto-fit, minmax(10rem, 20rem));
-            grid-template-rows: 1fr 1fr 1fr 1fr;
-            gap: 4rem;
-            justify-content: center;
-          }
+        @media only screen and (max-width: i.$bp-small){
+        grid-template-columns: repeat(auto-fit, minmax(10rem, 20rem));
+        grid-template-rows: repeat(4, 1fr);
+        gap: 4rem;
+        justify-content: center;
+        }
     }
 
     &__member{
         display: grid;
-        grid-template-rows: repeat(3, 6.7rem) 1fr 1fr;
+        // grid-template-rows: repeat(3, 6.7rem) 1fr 1fr;
+        grid-template-rows: auto;
         grid-template-columns: repeat(2, 1fr);
         background-color: i.$color-white;
 
@@ -129,60 +141,60 @@
     }
 
     &__member--1{
-        grid-column: 1/2;
-        grid-row: 2/3;
+        // grid-column: 1/2;
+        // grid-row: 2/3;
 
-        @media only screen and (max-width: i.$bp-small){
+        @media only screen and (max-width: i.$bp-medium){
             grid-column: 1/2;
             grid-row: 1/2;
         }
 
-        @media only screen and (max-width: i.$bp-smaller){
+        @media only screen and (max-width: i.$bp-small){
             grid-column: 1/2;
             grid-row: 1/2;
         }
     }
 
     &__member--2{
-        grid-column: 2/3;
-        grid-row: 2/3;
+        // grid-column: 2/3;
+        // grid-row: 2/3;
 
-        @media only screen and (max-width: i.$bp-small){
+        @media only screen and (max-width: i.$bp-medium){
             grid-column: 2/3;
             grid-row: 1/2;
         }
 
-        @media only screen and (max-width: i.$bp-smaller){
+        @media only screen and (max-width: i.$bp-small){
             grid-column: 1/2;
             grid-row: 2 /3;
         }
     }
 
     &__member--3{
-        grid-column: 3/4;
-        grid-row: 2/3;
+        // grid-column: 3/4;
+        // grid-row: 2/3;
 
-        @media only screen and (max-width: i.$bp-small){
+        @media only screen and (max-width: i.$bp-medium){
             grid-column: 1/2;
             grid-row: 2/3;
         }
 
-        @media only screen and (max-width: i.$bp-smaller){
+        @media only screen and (max-width: i.$bp-small){
             grid-column: 1/2;
             grid-row: 3 /4;
         }
     }
 
     &__member--4{
-        grid-column: 4/5;
-        grid-row: 2/3;
+        // grid-column: 4/5;
+        // grid-row: 2/3;
 
-        @media only screen and (max-width: i.$bp-small){
+        @media only screen and (max-width: i.$bp-medium){
             grid-column: 2/3;
             grid-row: 2/3;
         }
 
-        @media only screen and (max-width: i.$bp-smaller){
+        @media only screen and (max-width: i.$bp-small){
             grid-column: 1/2;
             grid-row: 4/5;
         }

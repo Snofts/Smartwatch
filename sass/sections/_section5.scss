@@ -6,12 +6,12 @@
     background-color: i.$color-background-ash2;
     min-height: 70rem;
 
-    @media only screen and (max-width: i.$bp-small){
-        min-height: 110rem;
+    @media only screen and (max-width: i.$bp-medium){
+        height: auto;
     }
 
     &__heading{
-        @media only screen and (max-width: i.$bp-small){
+        @media only screen and (max-width: i.$bp-medium){
             margin: 5rem 0rem 5rem 0rem;
         }
     }
@@ -29,15 +29,16 @@
         width: 80%;
         gap: 2rem;
 
-        @media only screen and (max-width: i.$bp-medium){
-            width: 75%;
-        }
+        // @media only screen and (max-width: i.$bp-medium){
+        //     width: 75%;
+        // }
 
-        @media only screen and (max-width: i.$bp-small){
+        @media only screen and (max-width: i.$bp-medium){
             grid-template-columns: repeat(auto-fit, minmax(15rem, 25rem));
-            grid-template-rows: repeat(2, 35rem);
+            grid-template-rows: 34rem;
+            height: auto;
             // width: 60%;
-            gap: 3rem;
+            // gap: 3rem;
             justify-content: center;
             margin-bottom: 5rem;
         }
@@ -86,13 +87,13 @@
             font-size: 1rem;
             text-transform: uppercase;
 
-            @media only screen and (max-width: i.$bp-medium){
+            @media only screen and (max-width: i.$bp-large){
                 width: 40%;
             }
 
-            @media only screen and (max-width: i.$bp-small){
-                width: 25%;
-            }
+            // @media only screen and (max-width: i.$bp-small){
+            //     width: 25%;
+            // }
             
 
             &:hover{

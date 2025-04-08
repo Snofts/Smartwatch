@@ -6,6 +6,10 @@
     min-height: 57rem;
     background-color: i.$color-background-ash;
 
+    @media only screen and (max-width: i.$bp-large){
+        min-height: 67rem;
+    }
+
 
     & h2{
         font-size: 3.5rem;
@@ -16,7 +20,7 @@
 
     &__text{
 
-        @media only screen and (max-width: i.$bp-small){
+        @media only screen and (max-width: i.$bp-largest){
             margin: 5rem 0rem 5rem 0rem;
         }
 
@@ -31,7 +35,7 @@
 
     &__items{
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(15.1rem, 25rem)); //101.28rem
+        grid-template-columns: repeat(auto-fit, minmax(10.1rem, 20rem)); //101.28rem
         grid-template-rows: repeat(2, 1fr);
         row-gap: 5rem;
         column-gap: 2rem;
@@ -39,11 +43,11 @@
         align-content: space-around;
         justify-content: space-around;
 
-        @media only screen and (max-width: i.$bp-largest){
-            width: 90%;
-        }
+        // @media only screen and (max-width: i.$bp-largest){
+        //     width: 90%;
+        // }
 
-        @media only screen and (max-width: i.$bp-small){
+        @media only screen and (max-width: i.$bp-largest){
             margin-bottom: 5rem;
         }
      

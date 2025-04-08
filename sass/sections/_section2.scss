@@ -14,10 +14,13 @@
 
     &__showcase{
         width: 30rem;
+        max-width: 100%;
     }
 
     & img{
+        display: block;
         width: 100%;
+        height: auto;
         margin-top: -6rem;
     }
 
@@ -41,6 +44,7 @@
     }
 
     &__description--text{
+        display: none;
         background-color: i.$color-orange;
         color: i.$color-white !important;
         font-size: 1.5rem !important;
@@ -52,20 +56,25 @@
     }
 }
 
+.circle-1::after,
+.circle-2::after,
+.circle-3::after,
+.circle-4::after{
+    display: block;
+    content: " ";
+    background-color: i.$color-blue;
+    width: 5rem;
+    height: 0.2rem;
+    position: relative;
+
+    @media only screen and (max-width: i.$bp-medium){
+        transform: rotate(90deg) !important;
+    }
+}
+
 .circle-1{
     top: 8rem;
     left: 27rem;
-
-    &::after{
-        display: block;
-        content: " ";
-        background-color: i.$color-blue;
-        width: 12rem;
-        height: 0.2rem;
-        position: relative;
-        top: -1.05rem;
-        left: 1.8rem;
-    }
 
     &-text{
         top: -37.65rem;
@@ -78,17 +87,6 @@
     top: 13rem;
     left: 5rem;
 
-    &::after{
-        display: block;
-        content: " ";
-        background-color: i.$color-blue;
-        width: 12rem;
-        height: 0.2rem;
-        position: relative;
-        top: -1rem;
-        left: -12rem;
-    }
-
     &-text{
         top: -33rem;
         left: -22rem;
@@ -99,17 +97,6 @@
 .circle-3{
     top: 19rem;
     left: 19rem;
-
-    &::after{
-        display: block;
-        content: " ";
-        background-color: i.$color-blue;
-        width: 12rem;
-        height: 0.2rem;
-        position: relative;
-        top: -1.05rem;
-        left: 1.8rem;
-    }
 
     &-text{
         top: -27.2rem;
@@ -122,21 +109,32 @@
     top: 27rem;
     left: 1rem;
 
-    &::after{
-        display: block;
-        content: " ";
-        background-color: i.$color-blue;
-        width: 12rem;
-        height: 0.2rem;
-        position: relative;
-        top: -1rem;
-        left: -12rem;
-    }
-
     &-text{
         top: -19.5rem;
         left: -26rem;
         text-align: center;
+    }
+}
+
+.circle-1::after,
+.circle-3::after{
+    top: -1.05rem;
+    left: 1.8rem;
+
+    @media only screen and (max-width: i.$bp-medium){
+        top: -4.5rem;
+        left: -1.5rem;
+    }
+}
+
+.circle-2::after,
+.circle-4::after{
+    top: -1rem;
+    left: -5rem;
+
+    @media only screen and (max-width: i.$bp-medium){
+        top: -4.5rem;
+        left: -1.5rem;
     }
 }
 

@@ -3,7 +3,7 @@
 .faq{
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(3, minmax(20rem, 1fr)); // 20rem
+    grid-template-rows: 20rem repeat(2, minmax(20rem, 1fr)); // 20rem
     align-content: space-around;
     justify-content: space-around;
     gap: 3rem;
@@ -11,6 +11,13 @@
     @media only screen and (max-width: i.$bp-small){
         grid-template-rows: minmax(20rem, 1fr) repeat(4, minmax(5rem, 15rem));
         gap: 2rem;
+        margin-bottom: 4rem;
+    }
+
+    @media only screen and (max-width: i.$bp-micro){
+        grid-template-rows: minmax(20rem, 1fr) repeat(4, 1fr);
+        gap: 2rem;
+        margin-bottom: 4rem;
     }
 
     &__header{
@@ -87,4 +94,13 @@
             align-content: center;
         }
     }
+
+    // &__qa--1, &__qa--2
+    // &__qa--3, &__qa--4{
+    //     @media only screen and (max-width: i.$bp-micro){
+    //         margin-bottom: 3rem;
+    //     }
+    // }
+
+
 }

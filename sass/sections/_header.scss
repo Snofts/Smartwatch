@@ -11,7 +11,7 @@
     // position: sticky;
     // top: 0;
 
-    @media only screen and (max-width: i.$bp-small){
+    @media only screen and (max-width: i.$bp-medium){
         justify-content: space-between;
       }
 
@@ -19,7 +19,7 @@
     display: block;
     height: 11rem;
 
-    @media only screen and (max-width: i.$bp-small){
+    @media only screen and (max-width: i.$bp-medium){
         margin-left: 3rem;
       }
     }
@@ -40,6 +40,10 @@
         font-weight: 500;
         text-align: center;
         justify-content: center;
+
+        @media only screen and (max-width: i.$bp-largest){
+            width: 24%;
+        }
 
         &:hover{
             background-color: i.$color-hover;
@@ -67,7 +71,7 @@
     text-transform: uppercase;
     z-index: 2;
 
-    @media only screen and (max-width: i.$bp-small){
+    @media only screen and (max-width: i.$bp-medium){
         display: none;
       }
 
@@ -94,8 +98,8 @@
     }
 
     &__popup{
+        display: none;
         @include i.popup;
-        
 
         &--overlay{
             position: absolute;
@@ -373,7 +377,7 @@
 .nav__responsive{
     display: none;
 
-    @media only screen and (max-width: i.$bp-small){
+    @media only screen and (max-width: i.$bp-medium){
         display: none; //block
         background-color: i.$color-white;
         z-index: 10;
@@ -448,13 +452,13 @@
                 height: 25%;
             }
         }
-      }
+    }
     
 
     &--menu{
         display: none;
 
-        @media only screen and (max-width: i.$bp-small){
+        @media only screen and (max-width: i.$bp-medium){
             display: block;
             z-index: 5;
             width: 10rem;

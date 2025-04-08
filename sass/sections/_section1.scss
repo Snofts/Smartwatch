@@ -24,19 +24,31 @@
         justify-content: space-around;
         align-items: center;
         height: 30rem;
+
+        // @media only screen and (max-width: i.$bp-small){
+        //     height: 25rem;
+        // }
+
     }
 
     & h1{
         font-size: 6rem;
 
-        @media only screen and (max-width: i.$bp-small){
-            font-size: 4rem;
+        @media only screen and (max-width: i.$bp-large){
+            font-size: 5rem;
           
         }
 
-        @media only screen and (max-width: i.$bp-smaller){
+        @media only screen and (max-width: i.$bp-medium){
             font-size: 3.5rem;
-          
+        }
+
+        @media only screen and (max-width: i.$bp-small){
+            font-size: 3rem;
+        }
+
+        @media only screen and (max-width: i.$bp-micro){
+            font-size: 2.5rem;
         }
     }
 
@@ -45,9 +57,16 @@
         text-align: center;
         color: i.$color-textparagraph;
 
+        @media only screen and (max-width: i.$bp-medium){
+            font-size: 1.7rem;
+        }
+
         @media only screen and (max-width: i.$bp-small){
             font-size: 1.5rem;
-          
+        }
+
+        @media only screen and (max-width: i.$bp-micro){
+            font-size: 1.3rem;
         }
     }
 
@@ -69,16 +88,14 @@
         border-radius: 5rem;
         padding-bottom: 1rem;
 
-        @media only screen and (max-width: i.$bp-small){
-            font-size: 2.3rem;
+        @media only screen and (max-width: i.$bp-micro){
+            font-size: 2rem;
         }
 
         &--order{
             display: none;
-        }
 
-        @media only screen and (max-width: i.$bp-small){
-            &--order{
+            @media only screen and (max-width: i.$bp-micro){
                 display: flex;
                 flex-direction: column;
                 width: 40%;
@@ -94,12 +111,17 @@
                 text-align: center;
                 justify-content: center;
                 text-decoration: none;
-                
+            }
+
+            @media only screen and (max-width: i.$bp-micro){
+                font-size: 1.6rem;
+            }
 
             &:hover{
-                background-color: i.$color-hover;
+                @media only screen and (max-width: i.$bp-medium){
+                    background-color: i.$color-hover;
+               }
             }
-        }
        }
 
 

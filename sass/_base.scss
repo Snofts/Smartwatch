@@ -15,11 +15,12 @@ $color-purple: purple;
 
 
 // Media Queries
-$bp-largest: 76.75rem; //1228px
-$bp-large: 66.25rem; //1060px
-$bp-medium: 62.5rem; //1000px
-$bp-small: 54.75rem; //876px
-$bp-smaller: 44rem; //704px
+$bp-largest: 73.44rem; //1175px
+$bp-large: 61.38rem; //982px
+$bp-medium: 48rem; //768px
+$bp-small: 36rem; //576px
+$bp-micro: 26.56rem; //425px
+// $bp-mini: 30.38rem; //486px
 
 
 
@@ -30,27 +31,30 @@ $bp-smaller: 44rem; //704px
     margin: 0;
     padding: 0;
     box-sizing: inherit;
+    border: 1px solid red;
   }
+
+  
   
   html {
     box-sizing: border-box;
     font-size: 80%;
 
     @media only screen and (max-width: $bp-largest){
-      font-size: 72%;
-    }
-
-    @media only screen and (max-width: $bp-large){
-      font-size: 65%;
+      font-size: 70%;
     }
 
     @media only screen and (max-width: $bp-medium){
-      font-size: 58%;
+      font-size: 62%;
     }
 
-    // @media only screen and (max-width: $bp-small){
-    //   font-size: 45%;
-    // }
+    @media only screen and (max-width: $bp-small){
+      font-size: 53%;
+    }
+
+    @media only screen and (max-width: $bp-micro){
+      font-size: 42%;
+    }
 
   }
 

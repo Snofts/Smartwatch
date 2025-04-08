@@ -2,12 +2,12 @@
 
 .timeline{
     display: grid;
-    grid-template-columns: 1fr 30rem 5rem 30rem 1fr;
+    grid-template-columns: minmax(3rem, 1fr) minmax(10rem, 30rem) 5rem minmax(10rem, 30rem)  minmax(3rem, 1fr);
     grid-template-rows: 20rem 65rem;
     gap: 2rem;
 
-    @media only screen and (max-width: i.$bp-smaller){
-        grid-template-columns: 1fr repeat(3, minmax(12rem, 1fr)) 1fr;
+    @media only screen and (max-width: i.$bp-small){
+        grid-template-columns: 1fr repeat(3, minmax(5rem, 1fr)) 1fr;
     }
 
    
@@ -27,11 +27,11 @@
         grid-template-columns: 1fr 5rem 1fr;
         gap: 1rem;
 
-        @media only screen and (max-width: i.$bp-smaller){
-            grid-column: 1/4;
+        @media only screen and (max-width: i.$bp-small){
+            grid-column: 1/5;
 
             grid-template-rows: 8rem 3rem 6rem 3rem 6rem 3rem 6rem 3rem 6rem 3rem 6rem 3rem 6rem 8rem;
-            grid-template-columns: 13rem 30rem;
+            grid-template-columns: 13rem minmax(5rem, 30rem);
             margin-bottom: 5rem;
         }
 
@@ -66,9 +66,9 @@
                 top: 61rem;
                 left: 2.2rem;
 
-                @media only screen and (max-width: i.$bp-smaller){
-                    height: 67rem;
-                    top: 71rem;
+                @media only screen and (max-width: i.$bp-small){
+                    height: 68rem;
+                    top: 72rem;
                 }
             }
         }
@@ -88,7 +88,7 @@
             justify-items: center;
             position: relative;
 
-            @media only screen and (max-width: i.$bp-smaller){
+            @media only screen and (max-width: i.$bp-small){
                 grid-row: 3/4;
             }
         }
@@ -99,7 +99,7 @@
             align-content: center;
             justify-items:start;
 
-            @media only screen and (max-width: i.$bp-smaller){
+            @media only screen and (max-width: i.$bp-small){
                 grid-row: 4/5;
             }
         }
@@ -110,7 +110,7 @@
             align-content: center;
             justify-items: center;
 
-            @media only screen and (max-width: i.$bp-smaller){
+            @media only screen and (max-width: i.$bp-small){
                 grid-row: 5/6;
             }
         }
@@ -121,7 +121,7 @@
             align-content: center;
             justify-items: end;
 
-            @media only screen and (max-width: i.$bp-smaller){
+            @media only screen and (max-width: i.$bp-small){
                 grid-row: 6/7;
             }
         }
@@ -132,7 +132,7 @@
             align-content: center;
             justify-items: center;
 
-            @media only screen and (max-width: i.$bp-smaller){
+            @media only screen and (max-width: i.$bp-small){
                 grid-row: 7/8;
             }
         }
@@ -143,7 +143,7 @@
             align-content: center;
             justify-items: start;
 
-            @media only screen and (max-width: i.$bp-smaller){
+            @media only screen and (max-width: i.$bp-small){
                 grid-row: 8/9;
             }
         }
@@ -154,7 +154,7 @@
             align-content: center;
             justify-items: center;
 
-            @media only screen and (max-width: i.$bp-smaller){
+            @media only screen and (max-width: i.$bp-small){
                 grid-row: 9/10;
             }
         }
@@ -165,7 +165,7 @@
             align-content: center;
             justify-items: end;
 
-            @media only screen and (max-width: i.$bp-smaller){
+            @media only screen and (max-width: i.$bp-small){
                 grid-row: 10/11;
             }
         }
@@ -176,7 +176,7 @@
             align-content: center;
             justify-items: center;
 
-            @media only screen and (max-width: i.$bp-smaller){
+            @media only screen and (max-width: i.$bp-small){
                 grid-row: 11/12;
             }
         }
@@ -187,7 +187,7 @@
             align-content: center;
             justify-items: start;
 
-            @media only screen and (max-width: i.$bp-smaller){
+            @media only screen and (max-width: i.$bp-small){
                 grid-row: 12/13;
             }
         }
@@ -198,14 +198,14 @@
             align-content: center;
             justify-items: center;
 
-            @media only screen and (max-width: i.$bp-smaller){
+            @media only screen and (max-width: i.$bp-small){
                 grid-row: 13/14;
             }
         }
 
        
 
-        @media only screen and (max-width: i.$bp-smaller){
+        @media only screen and (max-width: i.$bp-small){
             &--date1, &--task1,
             &--date2, &--task2,
             &--date3, &--task3,
@@ -231,7 +231,7 @@
             align-content: center;
             justify-items: center;
 
-            @media only screen and (max-width: i.$bp-smaller){
+            @media only screen and (max-width: i.$bp-small){
                 grid-row: 14/15;
                 align-content: start;
             }
@@ -250,7 +250,7 @@
             }
         }
 
-        @media only screen and (max-width: i.$bp-smaller){
+        @media only screen and (max-width: i.$bp-small){
             &--header,
             &--footer{
                 grid-column: 1/2;
@@ -299,8 +299,8 @@
         &--1, &--2,
         &--3, &--4,
         &--5, &--6{
-            @media only screen and (max-width: i.$bp-smaller){
-                left: -15.6rem;
+            @media only screen and (max-width: i.$bp-small){
+                left: -16rem;
                 top: 0rem;
             }
         }

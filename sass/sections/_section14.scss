@@ -3,7 +3,7 @@
 .newsletter{
     display: grid;
     grid-template-rows: repeat(2, 20rem);
-    grid-template-columns: 1fr 70rem 1fr;
+    grid-template-columns: 1fr minmax(10rem, 70rem) 1fr;
     align-content: center;
     justify-content: center;
 
@@ -17,9 +17,9 @@
             width: 70%;
             justify-self: center;
 
-        @media only screen and (max-width: i.$bp-smaller){
-            width: 60%;
-        }
+        // @media only screen and (max-width: i.$bp-smaller){
+        //     width: 60%;
+        // }
         }
     }
 
