@@ -4,7 +4,7 @@
 
     @include i.section-header;
     background-color: i.$color-background-ash2;
-    min-height: 70rem;
+    min-height: 60rem;
 
     @media only screen and (max-width: i.$bp-medium){
         height: auto;

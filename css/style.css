@@ -822,7 +822,6 @@ body {
 }
 .work__text {
   justify-content: space-between;
-  margin-top: 5rem;
 }
 .work__text p {
   width: 60%;
@@ -933,7 +932,7 @@ body {
 }
 @media only screen and (max-width: 61.38rem) {
   .benefits {
-    min-height: 67rem;
+    min-height: 51rem;
   }
 }
 .benefits h2 {
@@ -999,7 +998,7 @@ body {
   align-items: center;
   justify-content: space-evenly;
   background-color: rgba(218, 221, 214, 0.2745098039);
-  min-height: 70rem;
+  min-height: 60rem;
 }
 @media only screen and (max-width: 48rem) {
   .collection {
@@ -1565,7 +1564,7 @@ body {
 }
 .team__header {
   grid-column: 3/8;
-  display: block;
+  display: grid;
   align-content: center;
 }
 @media only screen and (max-width: 26.56rem) {

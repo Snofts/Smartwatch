@@ -18,7 +18,7 @@
 
     &__header{
         grid-column: 3/8;
-        display: block;
+        display: grid;
         align-content: center;
 
         @media only screen and (max-width: i.$bp-micro){
