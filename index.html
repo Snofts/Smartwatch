@@ -754,7 +754,21 @@
                 </div>
 
                 <div class="map__contact--side2">
-                    Back
+                    <form action="" class="map__contact--form">
+                        <input type="text" id="name" name="name" placeholder="Name">
+                        <input type="text" id="email" name="email" placeholder="Email address">
+                        <input type="text" id="subject" name="subject" placeholder="Subject">
+                        <!-- <input type="text" id="message" name="message" placeholder="Message"> -->
+                        <textarea name="message" id="message">Message</textarea>
+                        <button type="button" id="button" class="map__contact--side2--button btn__blue">
+                            Send message
+                        </button>
+                    </form>
+                    <div class="map__contact--cross">
+                        <svg >
+                            <use xlink:href="Images/Sprite.svg#icon-cross"></use>
+                        </svg>
+                    </div>
                 </div>
                 
             </div>
