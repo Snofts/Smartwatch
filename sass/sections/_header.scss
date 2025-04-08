@@ -96,7 +96,7 @@
     }
 
     &__popup{
-        display: none;
+        // display: none;
         @include i.popup;
 
         &--overlay{
@@ -376,7 +376,7 @@
     display: none;
 
     @media only screen and (max-width: i.$bp-medium){
-        display: block; //block
+        display: none; //block
         background-color: i.$color-white;
         z-index: 10;
         min-width: 30rem;

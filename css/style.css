@@ -4,7 +4,6 @@
   margin: 0;
   padding: 0;
   box-sizing: inherit;
-  border: 1px solid red;
 }
 
 html {
@@ -231,7 +230,6 @@ body {
   color: black;
 }
 .nav__popup {
-  display: none;
   position: fixed;
   z-index: 500;
   width: 100%;
@@ -476,7 +474,7 @@ body {
 }
 @media only screen and (max-width: 48rem) {
   .nav__responsive {
-    display: block;
+    display: none;
     background-color: rgb(255, 255, 255);
     z-index: 10;
     min-width: 30rem;
