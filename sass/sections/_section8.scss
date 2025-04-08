@@ -15,6 +15,7 @@
 
     &__header{
         grid-column: 2/6;
+        display: block;
         align-content: end;
         
         & h2 {
