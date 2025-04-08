@@ -827,6 +827,11 @@ body {
   width: 60%;
   justify-self: center;
 }
+@media only screen and (max-width: 48rem) {
+  .work__text {
+    margin-top: 5rem;
+  }
+}
 .work__text::after {
   display: block;
   content: " ";
