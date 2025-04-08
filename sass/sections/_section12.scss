@@ -300,7 +300,7 @@
         &--3, &--4,
         &--5, &--6{
             @media only screen and (max-width: i.$bp-small){
-                left: -16rem;
+                left: -15.6rem;
                 top: 0rem;
             }
         }
@@ -311,4 +311,5 @@
 .task{
     font-size: 1.5rem;
     background-color: i.$color-background-ash2;
+    // justify-self: center;
 }
