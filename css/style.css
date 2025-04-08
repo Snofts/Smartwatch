@@ -1235,7 +1235,7 @@ body {
 .review__header {
   grid-column: 2/6;
   display: grid;
-  align-content: end;
+  align-content: center;
 }
 .review__header h2 {
   font-size: 3;
