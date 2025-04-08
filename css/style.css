@@ -61,6 +61,7 @@ body {
 }
 
 .section__heading {
+  display: block;
   justify-content: center;
 }
 .section__heading::after {

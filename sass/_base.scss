@@ -88,6 +88,7 @@ $bp-micro: 26.56rem; //425px
  }
 
  .section__heading{
+  display: block;
   justify-content: center;
  
   &::after{
