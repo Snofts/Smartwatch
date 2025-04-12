@@ -2438,7 +2438,6 @@ body {
 }
 
 .video {
-  display: none;
   display: grid;
   grid-template-columns: minmax(0rem, 1fr) minmax(70rem, 1fr) minmax(0rem, 1fr);
   grid-template-rows: 55rem;
@@ -2449,6 +2448,7 @@ body {
   left: 0;
   z-index: 2000;
   height: 100dvh;
+  display: none;
 }
 @media only screen and (max-width: 48rem) {
   .video {
