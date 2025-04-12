@@ -76,48 +76,6 @@
                     </li>     
                 </ul>
             </nav>
-
-            <div class="nav__popup " id="popup">
-                <div class="nav__popup--overlay"></div>
-                <div class="nav__popup--content">
-                    <div class="nav__popup--image">
-                        <img src="Images/Popup-image-1.png" alt="Blue Smart Watch">
-                    </div>
-                    <div class="nav__popup--description">
-                        <div class="nav__popup--description1">
-                            <h3>smart watch</h3>
-                            <h2>watch limited edition</h2>
-                            <h4>Model As1500</h4>
-                            <div class="nav__popup--price"><span class="nav__popup--orgprice">&#36;299</span>&nbsp;&nbsp;&nbsp; <span class="nav__popup--discount">&#36;290</span>&nbsp;&nbsp;&nbsp; <span class="nav__popup--pricedescription">Early bird offer</span></div>
-                        </div>
-                        <div class="nav__popup--description2 heading-paragraph">
-                            <p>8mm Silver Aluminum Case with Blue Sport Band. Its perfect fit for tracking fitness. 100% waterproof. Buy this limted edition sports edition.</p>
-                        </div>
-                        <div class="nav__popup--description3">
-                            <div class="description3__flex">
-                                <h4>Available colors</h4>
-                                <form>
-                                    <input type="radio" id="color_black" name="watch_color">
-                                    <input type="radio" id="color_green" name="watch_color">
-                                    <input type="radio" id="color_blue" name="watch_color">
-                                    <input type="radio" id="color_purple" name="watch_color">
-                                </form>
-                            </div>
-                            <div class="description3__flex">
-                                <h4>left</h4>
-                                <p>280 sold</p>
-                            </div>
-                            <div class="description3__flex">
-                                <h4>Available sizes</h4>
-                                <p>l, m, s, xs</p>
-                            </div>
-                        </div>
-                        <div class="nav__popup--checkout">
-                            <button class="checkout__btn">Checkout</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
             <!-- <div class="nav__video">
                 <p>Your browser does not support the video tag.</p>
                 <video>
@@ -713,19 +671,6 @@
             <div class="map__display">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3170.3385769549286!2d-122.06400902462245!3d37.381824534699135!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fb6dfd0db40f7%3A0xdd71bb02633728bf!2s523%20Sylvan%20Ave%2C%20Mountain%20View%2C%20CA%2094041%2C%20USA!5e0!3m2!1sen!2sng!4v1739449867725!5m2!1sen!2sng" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
-            <!-- <div class="map__direction">
-                <div class="map__direction--header">
-                    <h4 class="map__direction--headertxt">Storey Ave</h4>
-                    <p class="map__direction--text">San Francisco, CA 94129</p>
-                </div>
-                <a href="" class="map__direction--link1">View larger map</a>
-                <a href="" class="map__direction--link2">
-                    <svg class="map__contact--side1--icon">
-                        <use xlink:href="Images/Sprite.svg#icon-address"></use>
-                    </svg>
-                    <span>Directions</span>
-                </a>
-            </div> -->
             <div class="map__contact">
                 <div class="map__contact--side1">
                     <h3 class="heading-3 map__contact--side1--header">Get in touch</h3>
@@ -758,7 +703,6 @@
                         <input type="text" id="name" name="name" placeholder="Name">
                         <input type="text" id="email" name="email" placeholder="Email address">
                         <input type="text" id="subject" name="subject" placeholder="Subject">
-                        <!-- <input type="text" id="message" name="message" placeholder="Message"> -->
                         <textarea name="message" id="message">Message</textarea>
                         <button type="button" id="button" class="map__contact--side2--button btn__blue">
                             Send message
@@ -817,6 +761,47 @@
                 <p class="footer__menu--copyright">Copyright &#169;Ninetheme. Proland. All rights reserved</p>
             </div>
         </footer>
+
+        <section class="popup " id="popup">
+                <div class="popup__content">
+                    <div class="popup__image">
+                        <img src="Images/Popup-image-1.png" alt="Blue Smart Watch">
+                    </div>
+                    <div class="popup__description">
+                        <div class="popup__description1">
+                            <h3>smart watch</h3>
+                            <h2>watch limited edition</h2>
+                            <h4>Model As1500</h4>
+                            <div class="popup__price"><span class="popup__orgprice">&#36;299</span>&nbsp;&nbsp;&nbsp; <span class="popup__discount">&#36;290</span>&nbsp;&nbsp;&nbsp; <span class="popup__pricedescription">Early bird offer</span></div>
+                        </div>
+                        <div class="popup__description2 heading-paragraph">
+                            <p>8mm Silver Aluminum Case with Blue Sport Band. Its perfect fit for tracking fitness. 100% waterproof. Buy this limted edition sports edition.</p>
+                        </div>
+                        <div class="popup__description3">
+                            <div class="description3__flex">
+                                <h4>Available colors</h4>
+                                <form>
+                                    <input type="radio" id="color_black" name="watch_color">
+                                    <input type="radio" id="color_green" name="watch_color">
+                                    <input type="radio" id="color_blue" name="watch_color">
+                                    <input type="radio" id="color_purple" name="watch_color">
+                                </form>
+                            </div>
+                            <div class="description3__flex">
+                                <h4>left</h4>
+                                <p>280 sold</p>
+                            </div>
+                            <div class="description3__flex">
+                                <h4>Available sizes</h4>
+                                <p>l, m, s, xs</p>
+                            </div>
+                        </div>
+                        <div class="popup__checkout">
+                            <button class="checkout__btn">Checkout</button>
+                        </div>
+                    </div>
+                </div>
+        </section>
     </div>
   </body>
 </html>
