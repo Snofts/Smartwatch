@@ -2252,7 +2252,6 @@ body {
 }
 @media only screen and (max-width: 48rem) {
   .popup {
-    grid-template-columns: minmax(0rem, 1fr) minmax(40rem, 1fr) minmax(0rem, 1fr);
     overflow-y: auto;
   }
 }
@@ -2436,6 +2435,55 @@ body {
 }
 .popup__description3 #color_purple:checked::before {
   border: 0.2rem solid purple;
+}
+
+.video {
+  display: none;
+  display: grid;
+  grid-template-columns: minmax(0rem, 1fr) minmax(70rem, 1fr) minmax(0rem, 1fr);
+  grid-template-rows: 55rem;
+  align-content: center;
+  background-color: rgba(255, 255, 255, 0.5607843137);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2000;
+  height: 100dvh;
+}
+@media only screen and (max-width: 48rem) {
+  .video {
+    grid-template-columns: minmax(0rem, 1fr) minmax(40rem, 1fr) minmax(0rem, 1fr);
+  }
+}
+.video__content {
+  grid-column: 2/3;
+  justify-self: center;
+  align-self: center;
+  z-index: 400;
+}
+.video__content iframe {
+  width: 70rem;
+  height: 48rem;
+}
+@media only screen and (max-width: 48rem) {
+  .video__content iframe {
+    width: 50rem;
+    height: 38rem;
+  }
+}
+.video__cross svg {
+  display: grid;
+  width: 1.1rem;
+  height: 1.1rem;
+  margin-top: 1rem;
+  fill: black;
+  justify-self: end;
+  margin-bottom: 2rem;
+}
+@media only screen and (max-width: 26.56rem) {
+  .video__cross svg {
+    margin: 0rem 3rem 3rem 0rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

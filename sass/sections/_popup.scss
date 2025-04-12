@@ -16,8 +16,6 @@
     height: 100dvh;
 
     @media only screen and (max-width: i.$bp-medium){
-        grid-template-columns: minmax(0rem, 1fr) minmax(40rem, 1fr) minmax(0rem, 1fr);
-        // grid-template-rows: 55rem 55rem;
         overflow-y: auto;
     }
 
