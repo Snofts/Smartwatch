@@ -38,6 +38,7 @@ console.log(popupOverlay);
 headerBtn.addEventListener('click', function(e){
     e.preventDefault();
     popup.classList.remove('hidden');
+    popup.classList.add('animate__zoomin');
     console.log(`It works`)
 });
 

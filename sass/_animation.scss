@@ -65,3 +65,20 @@
         transform: scale(1);
     }
 }
+
+.animate__zoomin {
+    animation: zoom-in 0.2s ease;
+  }
+
+
+  @keyframes zoom-in{
+    0% {
+      scale: 0%;
+    }
+    // 50% {
+    //   scale: 50%;
+    // }
+    100% {
+      scale: 100%;
+    }
+  }

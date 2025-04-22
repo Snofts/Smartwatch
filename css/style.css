@@ -157,6 +157,18 @@ body {
     transform: scale(1);
   }
 }
+.animate__zoomin {
+  animation: zoom-in 0.2s ease;
+}
+
+@keyframes zoom-in {
+  0% {
+    scale: 0%;
+  }
+  100% {
+    scale: 100%;
+  }
+}
 .header {
   display: flex;
   flex-direction: row;
