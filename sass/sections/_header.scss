@@ -48,19 +48,6 @@
         }
     }
 
-    &__sticky{
-        position: sticky;
-        top: 0;
-        background-color: i.$color-white;
-        padding-top: 0rem;
-        height: 6.5rem;
-
-
-        &--logo{
-            display: block;
-            height: 9rem;
-        }
-    }
 }
 
 .nav{

@@ -11,6 +11,7 @@ $color-heading-black: black;
 $color-icon-green: green;
 $color-icon-yellow: #c8c801;
 $color-popup-overlay:#ffffff8f;
+$color-popup-img: #efeded;
 $color-purple: purple;
 
 
@@ -103,9 +104,24 @@ $bp-micro: 26.56rem; //425px
  }
 }
 
+.sticky{
+  position: sticky;
+  top: 0;
+  background-color: $color-white;
+  padding-top: 0rem;
+  height: 6.5rem;
+
+
+  &--logo{
+      display: block;
+      height: 9rem;
+  }
+}
+
 .hidden{
   visibility: hidden;
   opacity: 0;
+  pointer-events: none;
 }
 
 .btn__blue{
@@ -119,6 +135,6 @@ $bp-micro: 26.56rem; //425px
 
 }
 
-.displayoff{
-  display: none;
-}
+// .hidden{
+//   display: none;
+// }

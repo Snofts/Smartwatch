@@ -2,7 +2,6 @@
 
 .video{
     @include i.popup;
-    display: none;
 
     &__content{
         grid-column: 2 / 3;
