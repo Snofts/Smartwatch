@@ -67,18 +67,93 @@
 }
 
 .animate__zoomin {
-    animation: zoom-in 0.2s ease;
-  }
+    animation: zoom-in 0.3s ease;
+    // animation-play-state: running;
+}
 
 
-  @keyframes zoom-in{
-    0% {
-      scale: 0%;
+@keyframes zoom-in{
+0% {
+    transform: scale(0);
+    opacity: 0;
+}
+100% {
+    transform: scale(1);
+    opacity: 1;
+}
+}
+
+.animate__zoomout {
+animation: zoom-out 0.3s ease;
+}
+
+
+@keyframes zoom-out{
+from {
+    transform: scale(1);
+    opacity: 1;
+}
+to {
+    transform: scale(0.8);
+    opacity: 0;
+}
+}
+
+
+.animate__reveal{
+    animation: reveal 1s ease;
+    transform-origin: top;
+    overflow: hidden;
+}
+
+
+@keyframes reveal{
+    from{
+        transform: scaleY(0);
+       
     }
-    // 50% {
-    //   scale: 50%;
-    // }
-    100% {
-      scale: 100%;
+    to{
+        transform: scaleY(1);
     }
-  }
+}
+
+.animate__conceal{
+    animation: conceal 1s ease;
+    transform-origin: top;
+    overflow: hidden;
+}
+
+@keyframes conceal{
+    from{
+        transform: scaleY(1);
+    }
+    to{
+        transform: scaleY(0);
+    }
+}
+
+.animate__flip{
+    animation: flip 1s ease;
+}
+
+@keyframes flip{
+    from{
+        transform: rotateY(0deg);
+    }
+    to{
+        transform: rotateY(180deg);
+    }
+}
+
+.animate__reverseflip{
+    animation: reverseflip 1s ease;
+}
+
+@keyframes reverseflip{
+    from{
+        transform: rotateY(180deg);
+    }
+    to{
+        transform: rotateY(0deg);
+    }
+}

@@ -33,7 +33,7 @@
         justify-self: center;
         align-self: center;
         z-index: 2100;
-        height: 48rem;
+        height: 45rem;
         box-shadow: 2rem 2rem 10rem -5rem;
 
         @media only screen and (max-width: i.$bp-medium){
@@ -235,5 +235,13 @@
         #color_purple:checked::before{
             border: 0.2rem solid i.$color-purple;
         }
+    }
+
+    &__cross{
+        position: relative;
+        bottom: 45rem;
+        left: 28rem;
+        width: 1rem;
+        height: 1rem;
     }
 }

@@ -193,13 +193,13 @@
             }
         }
 
-        &:hover &--side1 {
-            transform: rotateY(180deg);
-        }
+        // &:hover &--side1 {
+        //     transform: rotateY(180deg);
+        // }
 
-        &:hover &--side2 {
-            transform: rotateY(0deg);
-        }
+        // &:hover &--side2 {
+        //     transform: rotateY(0deg);
+        // }
 
         &--form{
             grid-column: 2/3;

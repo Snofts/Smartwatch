@@ -3,8 +3,15 @@
 .video{
     @include i.popup;
 
+    &__overlay{
+        grid-column: 1 / 4;
+        grid-row: 1 / 2;
+        z-index: 100;
+    }
+
     &__content{
         grid-column: 2 / 3;
+        grid-row: 1 / 2;
         justify-self: center;
         align-self: center;
         z-index: 400;

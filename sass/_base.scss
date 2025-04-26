@@ -107,12 +107,12 @@ $bp-micro: 26.56rem; //425px
 .sticky{
   position: sticky;
   top: 0;
-  background-color: $color-white;
-  padding-top: 0rem;
-  height: 6.5rem;
+  background-color: $color-white !important;
+  padding-top: 0rem !important;
+  height: 6.5rem !important;
 
 
-  &--logo{
+  &__logo{
       display: block;
       height: 9rem;
   }

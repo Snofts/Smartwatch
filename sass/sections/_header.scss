@@ -8,6 +8,11 @@
     height: 6rem;
     background: transparent;
     padding-top: 2rem;
+    z-index: 5000;
+    // position: fixed;
+    // top: 0;
+    // left: 0;
+    // right: 0;
 
     @media only screen and (max-width: i.$bp-medium){
         justify-content: space-between;
@@ -15,7 +20,7 @@
 
     &__logo{
     display: block;
-    height: 11rem;
+    height: 9rem;
 
     @media only screen and (max-width: i.$bp-medium){
         margin-left: 3rem;

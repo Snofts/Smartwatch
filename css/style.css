@@ -78,11 +78,11 @@ body {
 .sticky {
   position: sticky;
   top: 0;
-  background-color: rgb(255, 255, 255);
-  padding-top: 0rem;
-  height: 6.5rem;
+  background-color: rgb(255, 255, 255) !important;
+  padding-top: 0rem !important;
+  height: 6.5rem !important;
 }
-.sticky--logo {
+.sticky__logo {
   display: block;
   height: 9rem;
 }
@@ -158,15 +158,83 @@ body {
   }
 }
 .animate__zoomin {
-  animation: zoom-in 0.2s ease;
+  animation: zoom-in 0.3s ease;
 }
 
 @keyframes zoom-in {
   0% {
-    scale: 0%;
+    transform: scale(0);
+    opacity: 0;
   }
   100% {
-    scale: 100%;
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+.animate__zoomout {
+  animation: zoom-out 0.3s ease;
+}
+
+@keyframes zoom-out {
+  from {
+    transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+}
+.animate__reveal {
+  animation: reveal 1s ease;
+  transform-origin: top;
+  overflow: hidden;
+}
+
+@keyframes reveal {
+  from {
+    transform: scaleY(0);
+  }
+  to {
+    transform: scaleY(1);
+  }
+}
+.animate__conceal {
+  animation: conceal 1s ease;
+  transform-origin: top;
+  overflow: hidden;
+}
+
+@keyframes conceal {
+  from {
+    transform: scaleY(1);
+  }
+  to {
+    transform: scaleY(0);
+  }
+}
+.animate__flip {
+  animation: flip 1s ease;
+}
+
+@keyframes flip {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(180deg);
+  }
+}
+.animate__reverseflip {
+  animation: reverseflip 1s ease;
+}
+
+@keyframes reverseflip {
+  from {
+    transform: rotateY(180deg);
+  }
+  to {
+    transform: rotateY(0deg);
   }
 }
 .header {
@@ -177,6 +245,7 @@ body {
   height: 6rem;
   background: transparent;
   padding-top: 2rem;
+  z-index: 5000;
 }
 @media only screen and (max-width: 48rem) {
   .header {
@@ -185,7 +254,7 @@ body {
 }
 .header__logo {
   display: block;
-  height: 11rem;
+  height: 9rem;
 }
 @media only screen and (max-width: 48rem) {
   .header__logo {
@@ -1441,7 +1510,7 @@ body {
   border-radius: 50%;
   height: 2rem;
   width: 2rem;
-  z-index: 2;
+  z-index: 500;
   text-align: center;
   padding-bottom: 0.2rem;
 }
@@ -1461,12 +1530,7 @@ body {
   border-radius: 2rem;
   height: 12rem;
   width: 2rem;
-  z-index: 200;
-  position: relative;
-  top: 1rem;
-  left: 17rem;
   text-align: center;
-  display: none;
 }
 .team__member--icon-close svg {
   height: 1.2rem;
@@ -2112,12 +2176,6 @@ body {
   text-transform: uppercase;
   cursor: pointer;
 }
-.map__contact:hover .map__contact--side1 {
-  transform: rotateY(180deg);
-}
-.map__contact:hover .map__contact--side2 {
-  transform: rotateY(0deg);
-}
 .map__contact--form {
   grid-column: 2/3;
   display: grid;
@@ -2278,7 +2336,7 @@ body {
   justify-self: center;
   align-self: center;
   z-index: 2100;
-  height: 48rem;
+  height: 45rem;
   box-shadow: 2rem 2rem 10rem -5rem;
 }
 @media only screen and (max-width: 48rem) {
@@ -2452,6 +2510,13 @@ body {
 .popup__description3 #color_purple:checked::before {
   border: 0.2rem solid purple;
 }
+.popup__cross {
+  position: relative;
+  bottom: 45rem;
+  left: 28rem;
+  width: 1rem;
+  height: 1rem;
+}
 
 .video {
   display: grid;
@@ -2470,8 +2535,14 @@ body {
     grid-template-columns: minmax(0rem, 1fr) minmax(40rem, 1fr) minmax(0rem, 1fr);
   }
 }
+.video__overlay {
+  grid-column: 1/4;
+  grid-row: 1/2;
+  z-index: 100;
+}
 .video__content {
   grid-column: 2/3;
+  grid-row: 1/2;
   justify-self: center;
   align-self: center;
   z-index: 400;

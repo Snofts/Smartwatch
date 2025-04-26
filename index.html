@@ -79,6 +79,7 @@
             
         </header>
         <section class="banner">
+            <!-- <div class="trigger"></div> -->
             <div class="banner__text animate__fadein">
                 <h1>The future of tech is here</h1>
                 <p>Holisticly incentivize revolutionary collaboration and idea <br> sharing before cost effective users. Actual focused services <br> before highly efficient human capital.</p>
@@ -458,13 +459,12 @@
                     <img src="Images/Co-Founder and CEO.png" alt="Co-Founder and CEO">
                     <h3 class="heading-3">Gary Elliott</h3>
                     <p>Co-Founder and CEO</p>
-
                     <div class="team__member--icon member__icon--1 icon__1--open">
                         <svg>
-                            <use xlink:href="Images/Sprite.svg#icon-menu"></use>
+                            <use id="1" xlink:href="Images/Sprite.svg#icon-menu"></use>
                         </svg>
                     </div>
-                    <div class="team__member--icon-close member__icon--1 icon__1--close">
+                    <div class="team__member--icon-close member__icon--1 icon__1--close hidden">
                         <svg class="member__icon-cross1">
                             <use xlink:href="Images/Sprite.svg#icon-cross"></use>
                         </svg>
@@ -488,12 +488,12 @@
                     <p>Co-Founder and CTO</p>
 
                     <div class="team__member--icon member__icon--2 icon__2--open">
-                        <svg class="member__icon-cross2">
+                        <svg>
                             <use xlink:href="Images/Sprite.svg#icon-menu"></use>
                         </svg>
                     </div>
-                    <div class="team__member--icon-close member__icon--2 icon__2--close">
-                        <svg>
+                    <div class="team__member--icon-close member__icon--2 icon__2--close hidden">
+                        <svg class="member__icon-cross2">
                             <use xlink:href="Images/Sprite.svg#icon-cross"></use>
                         </svg>
                         <svg>
@@ -516,12 +516,12 @@
                     <p>Lead Developer, Hacker</p>
 
                     <div class="team__member--icon member__icon--3 icon__3--open">
-                        <svg class="member__icon-cross3">
+                        <svg>
                             <use xlink:href="Images/Sprite.svg#icon-menu"></use>
                         </svg>
                     </div>
-                    <div class="team__member--icon-close member__icon--3 icon__3--close">
-                        <svg>
+                    <div class="team__member--icon-close member__icon--3 icon__3--close hidden">
+                        <svg class="member__icon-cross3">
                             <use xlink:href="Images/Sprite.svg#icon-cross"></use>
                         </svg>
                         <svg>
@@ -548,7 +548,7 @@
                             <use xlink:href="Images/Sprite.svg#icon-menu"></use>
                         </svg>
                     </div>
-                    <div class="team__member--icon-close member__icon--4 icon__4--close">
+                    <div class="team__member--icon-close member__icon--4 icon__4--close hidden">
                         <svg class="member__icon-cross4">
                             <use xlink:href="Images/Sprite.svg#icon-cross"></use>
                         </svg>
@@ -669,28 +669,28 @@
             <div class="map__contact">
                 <div class="map__contact--side1">
                     <h3 class="heading-3 map__contact--side1--header">Get in touch</h3>
-                <div class="map__contact--side1--address">
-                    <svg class="map__contact--side1--icon">
-                        <use xlink:href="Images/Sprite.svg#icon-location"></use>
-                    </svg>
-                    <p>523 Sylvan Ave, 5th Floor <br> Mountain View, CA 94041USA</p>
-                </div>
-                <div class="map__contact--side1--number">
-                    <svg class="map__contact--side1--icon">
-                        <use xlink:href="Images/Sprite.svg#icon-phone"></use>
-                    </svg>
-                    <p>+1 (234) 56789 <br> +1 987 654 3210 
-                    </p>
-                </div>
-                <div class="map__contact--side1--email">
-                    <svg class="map__contact--side1--icon">
-                        <use xlink:href="Images/Sprite.svg#icon-mail"></use>
-                    </svg>
-                    <p>support@watchland.com</p>
-                </div>
-                <button type="button" class="map__contact--side1--button btn__blue">
-                    Contact us
-                </button>
+                    <div class="map__contact--side1--address">
+                        <svg class="map__contact--side1--icon">
+                            <use xlink:href="Images/Sprite.svg#icon-location"></use>
+                        </svg>
+                        <p>523 Sylvan Ave, 5th Floor <br> Mountain View, CA 94041USA</p>
+                    </div>
+                    <div class="map__contact--side1--number">
+                        <svg class="map__contact--side1--icon">
+                            <use xlink:href="Images/Sprite.svg#icon-phone"></use>
+                        </svg>
+                        <p>+1 (234) 56789 <br> +1 987 654 3210 
+                        </p>
+                    </div>
+                    <div class="map__contact--side1--email">
+                        <svg class="map__contact--side1--icon">
+                            <use xlink:href="Images/Sprite.svg#icon-mail"></use>
+                        </svg>
+                        <p>support@watchland.com</p>
+                    </div>
+                    <button type="button" class="map__contact--side1--button btn__blue">
+                        Contact us
+                    </button>
                 </div>
 
                 <div class="map__contact--side2">
@@ -704,7 +704,7 @@
                         </button>
                     </form>
                     <div class="map__contact--cross">
-                        <svg >
+                        <svg class="map__contact--crosssvg">
                             <use xlink:href="Images/Sprite.svg#icon-cross"></use>
                         </svg>
                     </div>
@@ -795,10 +795,14 @@
                         <div class="popup__checkout">
                             <button class="checkout__btn">Checkout</button>
                         </div>
+                        <svg class="popup__cross">
+                            <use xlink:href="Images/Sprite.svg#icon-cross"></use>
+                        </svg>
                     </div>
                 </div>
         </section>
         <section class="video hidden">
+            <div class="video__overlay"></div>
             <div class="video__content">
                 <div class="video__cross">
                     <svg>
