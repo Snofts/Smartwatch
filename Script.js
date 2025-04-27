@@ -33,7 +33,9 @@ const videoCross = document.querySelector(".video__cross");
 const videoClose = document.querySelectorAll(
   ".video > *:not(.video__content > *), .video__cross"
 );
-const teamIcon = document.querySelectorAll(".team__member--icon")
+
+const teamIconOpen = document.querySelectorAll(".team__member--icon");
+const teamIconClose = document.querySelectorAll(".team__member--icon-close");
 
 const popup = document.querySelector(".popup");
 const popupCross = document.querySelector(".popup__cross");
@@ -60,35 +62,52 @@ const closePopup = function (section) {
 // Team member Icon Open and Close Function
 // open
 const memberIconOpen = function (class1, class2) {
-    class1.classList.add("hidden");
-    class2.classList.remove("hidden");
-    class2.classList.remove("animate__conceal");
-    class2.classList.add("animate__reveal");
-  };
+  teamIconOpen.forEach((el) => {
+    if (el.classList.contains("hidden")) {
+      el.classList.remove("hidden");
+    } else return;
+  });
+
+  teamIconClose.forEach((el) => {
+    if (!el.classList.contains("hidden")) {
+      setTimeout(function () {
+        el.classList.add("hidden");
+      }, 700);
+      el.classList.remove("hidden");
+      el.classList.remove("animate__reveal");
+      el.classList.add("animate__conceal");
+      // el.classList.add("hidden");
+    } else return;
+  });
+
+  class1.classList.add("hidden");
+  class2.classList.remove("hidden");
+  class2.classList.remove("animate__conceal");
+  class2.classList.add("animate__reveal");
+};
 
 // Close
-  const memberIconClose = function (class1, class2) {
-    setTimeout(function () {
-      class2.classList.add("hidden");
-    }, 700);
-    class1.classList.remove("hidden");
-    class2.classList.remove("animate__reveal");
-    class2.classList.add("animate__conceal");
-  };
+const memberIconClose = function (class1, class2) {
+  setTimeout(function () {
+    class2.classList.add("hidden");
+  }, 700);
+  class1.classList.remove("hidden");
+  class2.classList.remove("animate__reveal");
+  class2.classList.add("animate__conceal");
+};
 
 //   Card flip animation
 // Flip
-const cardFlip = function(side1, side2){
-    side1.style.transform = 'rotateY(180deg)';
-    side2.style.transform = 'rotateY(0deg)';
-}
+const cardFlip = function (side1, side2) {
+  side1.style.transform = "rotateY(180deg)";
+  side2.style.transform = "rotateY(0deg)";
+};
 
 // Reverse flip
-const cardReverseFlip = function(side1, side2){
-    side1.style.transform = 'rotateY(0deg)';
-    side2.style.transform = 'rotateY(-180deg)';
-}
-
+const cardReverseFlip = function (side1, side2) {
+  side1.style.transform = "rotateY(0deg)";
+  side2.style.transform = "rotateY(-180deg)";
+};
 
 ////////////////////////////////////////////////////////////////////////////
 ////////////////////////////
@@ -96,20 +115,20 @@ const cardReverseFlip = function(side1, side2){
 // Sticky Nav
 const headerHeight = header.getBoundingClientRect().height;
 
-const stickyNav = function(entries){
+const stickyNav = function (entries) {
   const [entry] = entries;
   console.log(entry);
-//  entries.forEach(entry => {
-  
-//  })
-  if(!entry.isIntersecting) header.classList.add("sticky")
-    else header.classList.remove("sticky")
-}
+  //  entries.forEach(entry => {
+
+  //  })
+  if (!entry.isIntersecting) header.classList.add("sticky");
+  else header.classList.remove("sticky");
+};
 
 const bannerObserver = new IntersectionObserver(stickyNav, {
   root: null,
   threshold: 0,
-  rootMargin: `-${headerHeight}px`
+  rootMargin: `-${headerHeight}px`,
 });
 
 bannerObserver.observe(banner);
@@ -153,75 +172,58 @@ videoClose.forEach((element) => {
 //     closePopup(video);
 // })
 
+// Team member1 circle Open
+memberIcon1.addEventListener("click", function (e) {
+  memberIconOpen(memberIcon1, memberIconShow1);
+});
 
-teamIcon.forEach((el, i)=>{
-  el.addEventListener('click', function(e){
-    const loopPos = i + 1;
-    console.log(`memberIcon${loopPos}`);
-    const class1 = `memberIcon${loopPos}`;
-    const class2 = `memberIconShow${loopPos}`;
-    memberIconOpen(class1, class2)
-    // console.log(`memberIcon${e.target.dataset.id}`);
-    // const class1 = Number(`memberIcon${e.target.classList.value}`);
-    // const class2 = `memberIconShow${e.target.classList.value}`;
-    // console.log(class1, class2)
-    // memberIconOpen(class1, class2);
-  })
-})
+// Team member1 circle close
+memberIconCross1.addEventListener("click", function (e) {
+  memberIconClose(memberIcon1, memberIconShow1);
+});
 
+// Team member2 circle Open
+memberIcon2.addEventListener("click", function (e) {
+  memberIconOpen(memberIcon2, memberIconShow2);
+  // console.log(`${e.target}`);
+  // console.log(e.target)
+});
 
-// // Team member1 circle Open
-// memberIcon1.addEventListener("click", function (e) {
-//   memberIconOpen(memberIcon1, memberIconShow1);
-// });
+// Team member2 circle close
+memberIconCross2.addEventListener("click", function (e) {
+  memberIconClose(memberIcon2, memberIconShow2);
+  console.log("Close function triggered");
+});
 
-// // Team member1 circle close
-// memberIconCross1.addEventListener("click", function (e) {
-//   memberIconClose(memberIcon1, memberIconShow1);
-// });
+// Team member3 circle Open
+memberIcon3.addEventListener("click", function (e) {
+  memberIconOpen(memberIcon3, memberIconShow3);
+});
 
-// // Team member2 circle Open
-// memberIcon2.addEventListener("click", function (e) {
-//   memberIconOpen(memberIcon2, memberIconShow2);
-//   // console.log(`${e.target}`);
-//   // console.log(e.target)
-// });
+// Team member3 circle close
+memberIconCross3.addEventListener("click", function (e) {
+  memberIconClose(memberIcon3, memberIconShow3);
+});
 
-// // Team member2 circle close
-// memberIconCross2.addEventListener("click", function (e) {
-//   memberIconClose(memberIcon2, memberIconShow2);
-//   console.log("Close function triggered");
-// });
+// Team member4 circle Open
+memberIcon4.addEventListener("click", function (e) {
+  memberIconOpen(memberIcon4, memberIconShow4);
+});
 
-// // Team member3 circle Open
-// memberIcon3.addEventListener("click", function (e) {
-//   memberIconOpen(memberIcon3, memberIconShow3);
-// });
-
-// // Team member3 circle close
-// memberIconCross3.addEventListener("click", function (e) {
-//   memberIconClose(memberIcon3, memberIconShow3);
-// });
-
-// // Team member4 circle Open
-// memberIcon4.addEventListener("click", function (e) {
-//   memberIconOpen(memberIcon4, memberIconShow4);
-// });
-
-// // Team member4 circle close
-// memberIconCross4.addEventListener("click", function (e) {
-//   memberIconClose(memberIcon4, memberIconShow4);
-// });
+// Team member4 circle close
+memberIconCross4.addEventListener("click", function (e) {
+  memberIconClose(memberIcon4, memberIconShow4);
+});
 
 // Map Animation
 mapContactBtn1.addEventListener("click", function (e) {
-    cardFlip(mapContactSide1, mapContactSide2)
+  cardFlip(mapContactSide1, mapContactSide2);
 });
 
 mapContactBtn2.addEventListener("click", function (e) {
-    cardReverseFlip(mapContactSide1, mapContactSide2)
+  cardReverseFlip(mapContactSide1, mapContactSide2);
 });
 
 mapCross.addEventListener("click", function (e) {
-    cardReverseFlip(mapContactSide1, mapContactSide2)
+  cardReverseFlip(mapContactSide1, mapContactSide2);
 });
