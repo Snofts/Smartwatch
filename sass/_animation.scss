@@ -36,6 +36,11 @@
     
 }
 
+.animate__pulsefade{
+    animation: doublePulse 2s infinite, fadeInRightAnimation 2s;
+    transition: all 2s;
+}
+
 @keyframes fadeInRightAnimation {
     0% {
         transform: translateX(10rem);
@@ -68,7 +73,6 @@
 
 .animate__zoomin {
     animation: zoom-in 0.3s ease;
-    // animation-play-state: running;
 }
 
 

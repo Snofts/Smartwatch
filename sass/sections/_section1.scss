@@ -15,9 +15,6 @@
     margin-top: -10rem;
     padding-top: 10rem;
 
-    // animation: fadeInAnimation ease 3s;
-    // transition: all 3s;
-
     &__text{
         display: flex;
         flex-direction: column;
@@ -95,7 +92,7 @@
         &--order{
             display: none;
 
-            @media only screen and (max-width: i.$bp-micro){
+            @media only screen and (max-width: i.$bp-medium){
                 display: flex;
                 flex-direction: column;
                 width: 40%;
@@ -118,9 +115,9 @@
             }
 
             &:hover{
-                @media only screen and (max-width: i.$bp-medium){
+                // @media only screen and (max-width: i.$bp-medium){
                     background-color: i.$color-hover;
-               }
+            //    }
             }
        }
 

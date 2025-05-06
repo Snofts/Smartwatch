@@ -104,6 +104,11 @@ $bp-micro: 26.56rem; //425px
  }
 }
 
+.section__hidden{
+  opacity: 0;
+  transform: translateY(8rem);
+}
+
 .sticky{
   position: sticky;
   top: 0;
@@ -135,6 +140,3 @@ $bp-micro: 26.56rem; //425px
 
 }
 
-// .hidden{
-//   display: none;
-// }

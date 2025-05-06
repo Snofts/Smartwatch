@@ -1,15 +1,22 @@
 "use strict";
 
+const allSection = document.querySelectorAll(".section");
 const header = document.querySelector(".header");
-const trigger = document.querySelector(".trigger");
 const headerBtn = document.querySelector(".header__btn");
 const banner = document.querySelector(".banner");
 const bannerBtn = document.querySelector(".banner__btn");
+const bannerOrder = document.querySelector(".banner__btn--order");
+const productCircles = document.querySelectorAll(".product__circle");
+const productTexts = document.querySelectorAll(".product__description--text");
 const circle1 = document.querySelector(".circle-1");
 const circle2 = document.querySelector(".circle-2");
 const circle3 = document.querySelector(".circle-3");
 const circle4 = document.querySelector(".circle-4");
-const collectionBtn = document.querySelector(".collection__display--btn");
+const circle1Text = document.querySelector(".circle-1-text");
+const circle2Text = document.querySelector(".circle-2-text");
+const circle3Text = document.querySelector(".circle-3-text");
+const circle4Text = document.querySelector(".circle-4-text");
+const collectionBtn = document.querySelectorAll(".collection__display--btn");
 const memberIcon1 = document.querySelector(".icon__1--open");
 const memberIcon2 = document.querySelector(".icon__2--open");
 const memberIcon3 = document.querySelector(".icon__3--open");
@@ -42,6 +49,7 @@ const popupCross = document.querySelector(".popup__cross");
 const popupOverlay = document.querySelector(".popup__overlay");
 const popupBtn = document.querySelector(".checkout__btn");
 
+//////////////////////////////////////////////////////////////////////////
 // Functions
 
 // Popup Open and close function
@@ -58,6 +66,20 @@ const closePopup = function (section) {
     section.classList.add("hidden");
   }, 300);
 };
+
+//////////////// Product circle function
+const productCircleFunction  = function (text){
+  productTexts.forEach(el => {
+    el.classList.add('hidden')
+  }) 
+
+  if(text.classList.contains('hidden')) {
+    text.classList.remove('hidden')
+  } else {
+      text.classList.add('hidden')
+    }
+};
+
 
 // Team member Icon Open and Close Function
 // open
@@ -117,10 +139,6 @@ const headerHeight = header.getBoundingClientRect().height;
 
 const stickyNav = function (entries) {
   const [entry] = entries;
-  console.log(entry);
-  //  entries.forEach(entry => {
-
-  //  })
   if (!entry.isIntersecting) header.classList.add("sticky");
   else header.classList.remove("sticky");
 };
@@ -133,25 +151,77 @@ const bannerObserver = new IntersectionObserver(stickyNav, {
 
 bannerObserver.observe(banner);
 
+
+
+
+// Reveal Each Section
+const revealSection = function(entries, observer){
+  const [entry] = entries;
+  console.log(entry);
+  if (!entry.isIntersecting) return;
+  entry.target.classList.remove('section__hidden');
+  observer.unobserve(entry.target);
+}
+
+const sectionObserver = new IntersectionObserver(revealSection, {
+  root: null,
+  threshold: 0.20
+});
+
+allSection.forEach(section => {
+  sectionObserver.observe(section);
+  section.classList.add("section__hidden")
+});
+
+
+
+/////// Product circle
+// Circle 1
+circle1.addEventListener('click', function(){
+  productCircleFunction(circle1Text)
+})
+
+// Circle 2
+circle2.addEventListener('click', function(){
+  productCircleFunction(circle2Text)
+})
+
+// Circle 3
+circle3.addEventListener('click', function(){
+  productCircleFunction(circle3Text)
+})
+
+// Circle 4
+circle4.addEventListener('click', function(){
+  productCircleFunction(circle4Text)
+})
+
+
+
 // Open watch popup
 
-headerBtn.addEventListener("click", function (e) {
-  e.preventDefault();
+headerBtn.addEventListener("click", function () {
+  openPopup(popup);
+});
+
+bannerOrder.addEventListener("click", function () {
   openPopup(popup);
 });
 
 // Close watch popup
-// popupCross.addEventListener('click', function(e){
-//     e.preventDefault();
-//     popup.classList.add('hidden');
-// });
-
-popupOverlay.addEventListener("click", function (e) {
+popupCross.addEventListener('click', function(){
   closePopup(popup);
 });
 
+popupOverlay.addEventListener("click", function () {
+  closePopup(popup);
+});
+
+
+
+
 // Open Video popup
-bannerBtn.addEventListener("click", function (e) {
+bannerBtn.addEventListener("click", function () {
   openPopup(video);
 });
 
@@ -159,7 +229,6 @@ bannerBtn.addEventListener("click", function (e) {
 videoClose.forEach((element) => {
   element.addEventListener("click", function () {
     closePopup(video);
-    console.log("Element clicked!");
   });
 });
 
@@ -171,6 +240,16 @@ videoClose.forEach((element) => {
 //     // openPopup()
 //     closePopup(video);
 // })
+
+
+//// Collection Popup
+collectionBtn.forEach(btn => {
+  btn.addEventListener("click", function () {
+    openPopup(popup);
+  });
+})
+
+
 
 // Team member1 circle Open
 memberIcon1.addEventListener("click", function (e) {
@@ -185,14 +264,11 @@ memberIconCross1.addEventListener("click", function (e) {
 // Team member2 circle Open
 memberIcon2.addEventListener("click", function (e) {
   memberIconOpen(memberIcon2, memberIconShow2);
-  // console.log(`${e.target}`);
-  // console.log(e.target)
 });
 
 // Team member2 circle close
 memberIconCross2.addEventListener("click", function (e) {
   memberIconClose(memberIcon2, memberIconShow2);
-  console.log("Close function triggered");
 });
 
 // Team member3 circle Open
@@ -214,6 +290,9 @@ memberIcon4.addEventListener("click", function (e) {
 memberIconCross4.addEventListener("click", function (e) {
   memberIconClose(memberIcon4, memberIconShow4);
 });
+
+
+
 
 // Map Animation
 mapContactBtn1.addEventListener("click", function (e) {

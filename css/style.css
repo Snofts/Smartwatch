@@ -75,6 +75,11 @@ body {
   margin-top: 1.5rem;
 }
 
+.section__hidden {
+  opacity: 0;
+  transform: translateY(8rem);
+}
+
 .sticky {
   position: sticky;
   top: 0;
@@ -131,6 +136,11 @@ body {
 .animate__fadeinup {
   animation: fadeInUpAnimation ease 3s;
   transition: all 3s;
+}
+
+.animate__pulsefade {
+  animation: doublePulse 2s infinite, fadeInRightAnimation 2s;
+  transition: all 2s;
 }
 
 @keyframes fadeInRightAnimation {
@@ -245,7 +255,7 @@ body {
   height: 6rem;
   background: transparent;
   padding-top: 2rem;
-  z-index: 5000;
+  z-index: 1500;
 }
 @media only screen and (max-width: 48rem) {
   .header {
@@ -506,7 +516,7 @@ body {
 .banner__btn--order {
   display: none;
 }
-@media only screen and (max-width: 26.56rem) {
+@media only screen and (max-width: 48rem) {
   .banner__btn--order {
     display: flex;
     flex-direction: column;
@@ -530,10 +540,8 @@ body {
     font-size: 1.6rem;
   }
 }
-@media only screen and (max-width: 48rem) {
-  .banner__btn--order:hover {
-    background-color: rgba(45, 45, 45, 0.838);
-  }
+.banner__btn--order:hover {
+  background-color: rgba(45, 45, 45, 0.838);
 }
 .banner__btn--play {
   fill: rgb(255, 255, 255);
@@ -574,6 +582,7 @@ body {
   z-index: 100;
   position: relative;
   font-size: 1.3rem;
+  cursor: pointer;
   animation: doublePulse 2s infinite, fadeInRightAnimation 2s;
   transition: all 2s;
 }
@@ -581,7 +590,6 @@ body {
   height: 0rem;
 }
 .product__description--text {
-  display: none;
   background-color: #f62;
   color: rgb(255, 255, 255) !important;
   font-size: 1.5rem !important;
@@ -591,23 +599,18 @@ body {
   z-index: 100;
   border-radius: 0.5rem;
 }
-
-.circle-1::after,
-.circle-2::after,
-.circle-3::after,
-.circle-4::after {
+.product__description--text::after {
   display: block;
   content: " ";
   background-color: #0084ff;
   width: 5rem;
   height: 0.2rem;
   position: relative;
+  top: -1rem;
+  right: 5rem;
 }
 @media only screen and (max-width: 48rem) {
-  .circle-1::after,
-  .circle-2::after,
-  .circle-3::after,
-  .circle-4::after {
+  .product__description--text::after {
     transform: rotate(90deg) !important;
   }
 }
@@ -617,9 +620,19 @@ body {
   left: 27rem;
 }
 .circle-1-text {
-  top: -37.65rem;
-  left: 40.8rem;
+  top: -37.25rem;
+  left: 33.8rem;
   text-align: center;
+}
+.circle-1-text::after {
+  top: -1.2rem;
+  right: 5rem;
+}
+@media only screen and (max-width: 48rem) {
+  .circle-1-text::after {
+    top: -4.5rem;
+    left: -1.5rem;
+  }
 }
 
 .circle-2 {
@@ -627,9 +640,19 @@ body {
   left: 5rem;
 }
 .circle-2-text {
-  top: -33rem;
-  left: -22rem;
+  top: -32.5rem;
+  left: -15rem;
   text-align: center;
+}
+.circle-2-text::after {
+  top: -1.2rem;
+  left: 15rem;
+}
+@media only screen and (max-width: 48rem) {
+  .circle-2-text::after {
+    top: -4.5rem;
+    left: -1.5rem;
+  }
 }
 
 .circle-3 {
@@ -637,9 +660,19 @@ body {
   left: 19rem;
 }
 .circle-3-text {
-  top: -27.2rem;
-  left: 32.8rem;
+  top: -27rem;
+  left: 25.8rem;
   text-align: center;
+}
+.circle-3-text::after {
+  top: -1.1rem;
+  left: -5rem;
+}
+@media only screen and (max-width: 48rem) {
+  .circle-3-text::after {
+    top: -4.5rem;
+    left: -1.5rem;
+  }
 }
 
 .circle-4 {
@@ -647,32 +680,16 @@ body {
   left: 1rem;
 }
 .circle-4-text {
-  top: -19.5rem;
-  left: -26rem;
+  top: -19.4rem;
+  left: -19rem;
   text-align: center;
 }
-
-.circle-1::after,
-.circle-3::after {
-  top: -1.05rem;
-  left: 1.8rem;
+.circle-4-text::after {
+  top: -1.2rem;
+  left: 15rem;
 }
 @media only screen and (max-width: 48rem) {
-  .circle-1::after,
-  .circle-3::after {
-    top: -4.5rem;
-    left: -1.5rem;
-  }
-}
-
-.circle-2::after,
-.circle-4::after {
-  top: -1rem;
-  left: -5rem;
-}
-@media only screen and (max-width: 48rem) {
-  .circle-2::after,
-  .circle-4::after {
+  .circle-4-text::after {
     top: -4.5rem;
     left: -1.5rem;
   }
@@ -2336,7 +2353,7 @@ body {
   justify-self: center;
   align-self: center;
   z-index: 2100;
-  height: 45rem;
+  height: 46rem;
   box-shadow: 2rem 2rem 10rem -5rem;
 }
 @media only screen and (max-width: 48rem) {
@@ -2373,6 +2390,7 @@ body {
   grid-template-rows: repeat(4, 11.2rem);
   padding: 3rem 3rem 0rem 3rem;
   background-color: rgb(255, 255, 255);
+  height: 48rem;
 }
 @media only screen and (max-width: 48rem) {
   .popup__description {
