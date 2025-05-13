@@ -2414,7 +2414,7 @@ body {
 }
 @media only screen and (max-width: 48rem) {
   .popup__overlay {
-    height: 165vh;
+    height: 247vh;
   }
 }
 @media only screen and (max-width: 26.56rem) {
@@ -2611,7 +2611,7 @@ body {
 .popup__description3 #color_purple:checked::before {
   border: 0.2rem solid purple;
 }
-.popup__cross {
+.popup__cross1 {
   position: relative;
   bottom: 40rem;
   left: 28rem;
@@ -2619,11 +2619,20 @@ body {
   height: 1rem;
 }
 @media only screen and (max-width: 48rem) {
-  .popup__cross {
+  .popup__cross1 {
+    display: none;
+  }
+}
+.popup__cross2 {
+  display: none;
+}
+@media only screen and (max-width: 48rem) {
+  .popup__cross2 {
+    display: flex;
+    justify-content: end;
     position: absolute;
-    bottom: 47rem;
-    top: -46rem;
-    left: 44rem;
+    top: 2rem;
+    right: 4rem;
     width: 2rem;
     height: 3rem;
     z-index: 2101;

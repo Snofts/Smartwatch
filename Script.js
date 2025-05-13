@@ -52,7 +52,8 @@ const teamIconOpen = document.querySelectorAll(".team__member--icon");
 const teamIconClose = document.querySelectorAll(".team__member--icon-close");
 
 const popup = document.querySelector(".popup");
-const popupCross = document.querySelector(".popup__cross");
+const popupCross1 = document.querySelector(".popup__cross1");
+const popupCross2 = document.querySelector(".popup__cross2");
 const popupOverlay = document.querySelector(".popup__overlay");
 const popupContent = document.querySelector(".popup__content");
 const popupBtn = document.querySelector(".checkout__btn");
@@ -311,7 +312,11 @@ bannerOrder.addEventListener("click", function () {
 });
 
 // Close watch popup
-popupCross.addEventListener('click', function(){
+popupCross1.addEventListener('click', function(){
+  closePopup(popup);
+});
+
+popupCross2.addEventListener('click', function(){
   closePopup(popup);
 });
 
