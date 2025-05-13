@@ -40,6 +40,7 @@ $bp-micro: 26.56rem; //425px
   html {
     box-sizing: border-box;
     font-size: 80%;
+    scroll-padding-top: 6.5rem;
 
     @media only screen and (max-width: $bp-largest){
       font-size: 70%;
@@ -104,10 +105,10 @@ $bp-micro: 26.56rem; //425px
  }
 }
 
-.section__hidden{
-  opacity: 0;
-  transform: translateY(8rem);
-}
+// .section__hidden{
+//   opacity: 0;
+//   transform: translateY(8rem);
+// }
 
 .sticky{
   position: sticky;
@@ -128,6 +129,7 @@ $bp-micro: 26.56rem; //425px
   opacity: 0;
   pointer-events: none;
 }
+
 
 .btn__blue{
   font-size: 2.5rem;

@@ -1,8 +1,14 @@
 "use strict";
 
+const body = document.querySelector("body");
 const allSection = document.querySelectorAll(".section");
 const header = document.querySelector(".header");
+const navList = document.querySelector(".nav__list");
+const navResList = document.querySelector(".nav__responsive--list");
 const headerBtn = document.querySelector(".header__btn");
+const menuIcon = document.querySelector(".nav__responsive--menu");
+const menuList = document.querySelector(".nav__responsive");
+const menuClose = document.querySelector(".nav__responsive--close");
 const banner = document.querySelector(".banner");
 const bannerBtn = document.querySelector(".banner__btn");
 const bannerOrder = document.querySelector(".banner__btn--order");
@@ -36,6 +42,7 @@ const mapContactBtn2 = document.querySelector(".map__contact--side2--button");
 const mapCross = document.querySelector(".map__contact--crosssvg");
 const video = document.querySelector(".video");
 const videoCross = document.querySelector(".video__cross");
+const iframe = document.querySelector('.iframe');
 
 const videoClose = document.querySelectorAll(
   ".video > *:not(.video__content > *), .video__cross"
@@ -47,6 +54,7 @@ const teamIconClose = document.querySelectorAll(".team__member--icon-close");
 const popup = document.querySelector(".popup");
 const popupCross = document.querySelector(".popup__cross");
 const popupOverlay = document.querySelector(".popup__overlay");
+const popupContent = document.querySelector(".popup__content");
 const popupBtn = document.querySelector(".checkout__btn");
 
 //////////////////////////////////////////////////////////////////////////
@@ -57,6 +65,10 @@ const openPopup = function (section) {
   section.classList.remove("hidden");
   section.classList.remove("animate__zoomout");
   section.classList.add("animate__zoomin");
+  
+  setTimeout(() => {
+    popup.scrollTop = 0;
+  }, 0);
 };
 
 const closePopup = function (section) {
@@ -67,17 +79,52 @@ const closePopup = function (section) {
   }, 300);
 };
 
-//////////////// Product circle function
-const productCircleFunction  = function (text){
-  productTexts.forEach(el => {
-    el.classList.add('hidden')
-  }) 
+// Function that stops the video from playin when it is closed
+const stopVideo = function(){
+  const src = iframe.src
+  console.log(src)
+  iframe.src = ' ';
+  iframe.src = src;
 
-  if(text.classList.contains('hidden')) {
-    text.classList.remove('hidden')
-  } else {
-      text.classList.add('hidden')
+}
+
+
+
+// Menu display function
+const menuReveal = function(){
+  menuIcon.classList.add('hidden');
+  menuList.style.display = "flex";
+  menuList.classList.remove('slide-in-left');
+  menuList.classList.add('slide-in-right');
+  body.style.overflow = 'hidden';
+}
+
+// Menu display off function
+const menuConceal = function(){
+  menuList.classList.remove('slide-in-right');
+  menuList.classList.add('slide-in-left');
+  body.style.overflow = 'visible';
+  setTimeout(
+    function(){
+      menuIcon.classList.remove('hidden');
+      menuList.style.display = "none";
     }
+  , 500)
+}
+
+
+//////////////// Product circle function
+const productCircleFunction = function (text) {
+  const isAlreadyVisible = !text.classList.contains('hidden');
+
+  productTexts.forEach(el => {
+    el.classList.add('hidden');
+  });
+
+  // Only show if it wasn't already visible
+  if (!isAlreadyVisible) {
+    text.classList.remove('hidden');
+  }
 };
 
 
@@ -131,6 +178,7 @@ const cardReverseFlip = function (side1, side2) {
   side2.style.transform = "rotateY(-180deg)";
 };
 
+
 ////////////////////////////////////////////////////////////////////////////
 ////////////////////////////
 
@@ -153,12 +201,67 @@ bannerObserver.observe(banner);
 
 
 
+// Menu display
+menuIcon.addEventListener('click', function(){
+  menuReveal();
+})
+
+// Menu Display Off
+menuClose.addEventListener('click', function(){
+  menuConceal();
+})
+
+
+
+
+////Navigation scroll
+navList.addEventListener('click', function(e){
+  e.preventDefault();
+  if(e.target.classList.contains('nav__link')){
+    const id = e.target.getAttribute('href');
+    console.log(id);
+    if(id === '#header') header.classList.remove("sticky");
+    document.querySelector(id).scrollIntoView({behavior: 'smooth'})
+  }
+})
+
+navResList.addEventListener('click', function(e){
+  e.preventDefault();
+  menuConceal()
+
+  // Navigation scrolls to section on tablet screen and below
+  setTimeout(
+    function(){
+      if(e.target.classList.contains('nav__responsive--link')){
+        const id = e.target.getAttribute('href');
+        console.log(id);
+        if(id === '#header') header.classList.remove("sticky");
+        document.querySelector(id).scrollIntoView({behavior: 'smooth', block: 'start'})
+      }
+    }, 800)
+})
+
+
 
 // Reveal Each Section
 const revealSection = function(entries, observer){
   const [entry] = entries;
-  console.log(entry);
   if (!entry.isIntersecting) return;
+
+  // Add doublepulse animation when the product section comes into view
+  if(entry.target.classList.contains('product')) {
+    productCircles.forEach((el) => {
+      el.classList.add('animate__fadeiright');
+      console.log('fade in right')
+    })
+  } else {
+    productCircles.forEach((el) => {
+      el.classList.add('animate__fadeinright');
+      console.log('fade in right')
+    })
+    console.log('fade in removed')
+  }
+    
   entry.target.classList.remove('section__hidden');
   observer.unobserve(entry.target);
 }
@@ -199,7 +302,6 @@ circle4.addEventListener('click', function(){
 
 
 // Open watch popup
-
 headerBtn.addEventListener("click", function () {
   openPopup(popup);
 });
@@ -229,17 +331,10 @@ bannerBtn.addEventListener("click", function () {
 videoClose.forEach((element) => {
   element.addEventListener("click", function () {
     closePopup(video);
+    stopVideo()
   });
 });
 
-// videoCross.addEventListener('click', function(e){
-//     e.preventDefault();
-//     // const openPopup = function(){
-//     //     video.classList.add('hidden');
-//     // }
-//     // openPopup()
-//     closePopup(video);
-// })
 
 
 //// Collection Popup

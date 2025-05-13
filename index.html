@@ -8,8 +8,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" href="src/img/favicon.png" type="image/x-icon" />
-    <link rel="preload" as="image" href="../Images/Smartwatch-banner.jpg">
+    <link rel="icon" type="image/png" href="./Images/Smartwatch-logo-coloured-removebg.png">
+    <link rel="preload" as="image" href="./Images/Smartwatch-banner.jpg">
 
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -19,27 +19,27 @@
 
   <body>
     <div class="container">
-        <header class="header">
+        <header class="header" id="header">
             <img class="section__header header__logo" src="Images/Smartwatch-logo-black-removebg.png" alt="SmartWatch logo"/>
             <nav class="nav">
                 <ul class="nav__list">
                     <li class="nav__list-home">
-                        <a href="#home">Home</a>
+                        <a class="nav__link" href="#header">Home</a>
                     </li>
                     <li class="nav__list-product">
-                        <a href="#product">Product</a>
+                        <a class="nav__link" href="#section__2">Product</a>
                     </li>
                     <li class="nav__list-features">
-                        <a href="#features">Features</a>
+                        <a class="nav__link" href="#section__4">Features</a>
                     </li>
                     <li class="nav__list-reviews">
-                        <a href="#reviews">Reviews</a>
+                        <a class="nav__link" href="#section__8">Reviews</a>
                     </li>
                     <li class="nav__list-contact">
-                        <a href="#contact">Contact</a>
+                        <a class="nav__link" href="#section__15">Contact</a>
                     </li>
                     <li class="nav__list-blog">
-                        <a href="#blog">Blog</a>
+                        <a class="nav__link" href="#blog">Blog</a>
                     </li>
                     <a href="#popup" class="header__btn">Pre-order now</a>
                 </ul>
@@ -49,36 +49,8 @@
                     <use xlink:href="Images/Sprite.svg#icon-menu"></use>
                 </svg>
             </div>
-            <nav class="nav__responsive">
-                <ul class="nav__responsive--list">
-                    <li class="nav__responsive--list-home">
-                        <a href="#home">Home</a>
-                    </li>
-                    <li class="nav__responsive--list-product">
-                        <a href="#product">Product</a>
-                    </li>
-                    <li class="nav__responsive--list-features">
-                        <a href="#features">Features</a>
-                    </li>
-                    <li class="nav__responsive--list-reviews">
-                        <a href="#reviews">Reviews</a>
-                    </li>
-                    <li class="nav__responsive--list-contact">
-                        <a href="#contact">Contact</a>
-                    </li>
-                    <li class="nav__responsive--list-blog">
-                        <a href="#blog">Blog</a>
-                    </li>
-                    <li class="nav__responsive--close">
-                        <svg >
-                            <use xlink:href="Images/Sprite.svg#icon-cross"></use>
-                        </svg>
-                    </li>     
-                </ul>
-            </nav>
-            
         </header>
-        <section class="banner">
+        <section class="banner" id="section__1">
             <!-- <div class="trigger"></div> -->
             <div class="banner__text animate__fadein">
                 <h1>The future of tech is here</h1>
@@ -88,7 +60,7 @@
             </div>
             <img class="banner__img animate__fadein" src="Images/apple-watch-1.png" alt="Smartwatch">
         </section> 
-        <section class="product section">
+        <section class="product section" id="section__2">
             <div class="product__text section__heading animate__fadeinup">
                 <h2 class="heading-2">The product</h2>
                 <p class="heading-paragraph">Introduce the product here. A small description about what it is and how it helps the user. You can also add some photos below.</p>
@@ -108,7 +80,7 @@
             </div>
 
         </section>
-        <section class="work section">
+        <section class="work section" id="section__3">
             <div class="work__text section__heading">
                 <h2 class="heading-2">How it works</h2>
                 <p>Everybody loves tech gadgets, But our&#8217s is different. Here is how it works. Its should be simple. Add how easy is to install your product</p>
@@ -143,7 +115,7 @@
                     </div>
             </div>
         </section>
-        <section class="benefits section">
+        <section class="benefits section" id="section__4">
             <div class="benefits__text section__heading">
                 <h2 class="heading-2">The benefits</h2>
                 <p>List out your product&#8217s benefit here. A small description about what it is and how it helps the user. You can also add some icons.</p>
@@ -193,7 +165,7 @@
                 </div>
             </div>
         </section>
-        <section class="collection section">
+        <section class="collection section" id="section__5">
                 <div class="collection__heading section__heading">
                     <h2 class="heading-2">Our collection</h2>
                     <p class="heading-paragraph collection__heading--p">You are unique. You have unique style and you need a unique watch for you. Choose from our collection of watches.</p>
@@ -229,7 +201,7 @@
                     </div>
                 </div>
         </section>
-        <section class="watch__grid section">
+        <section class="watch__grid section" id="section__6">
             <div class="watch">
                 <div class="watch__text">
                     <div class="watch__text--header section__heading">
@@ -267,7 +239,7 @@
             </div>  
         </section>
 
-        <section class="gallery section">
+        <section class="gallery section" id="section__7">
             <img class="gallery__img1" src="Images/Gallery-1.jpg" alt="Watch on hand">
             <div class="gallery__text--container1">
                 <div class="gallery__text--1">
@@ -283,7 +255,7 @@
             </div>
             <img class="gallery__img2" src="Images/Gallery-2.jpg" alt="Watch on hand">
         </section>
-        <section class="review section">
+        <section class="review section" id="section__8">
             <div class="review__header">
                 <h2 class="heading-2">review</h2>
                 <p class="heading-paragraph">Don&#8217t take our word, See what our experts says about the watch. We have got over 1000s of positive reviews.</p>
@@ -343,7 +315,7 @@
                 </div>
             </div>
         </section>
-        <section class="faq section">
+        <section class="faq section" id="section__9">
             <div class="faq__header section__heading">
                 <h2 class="heading-2">FAQ</h2>
                 <p class="heading-paragraph">Got questions? We&#8217ve got answers. If you have some other questions, feel free to send us an email to</p>
@@ -366,7 +338,7 @@
                 <p>The accelerometer lets the watch count your steps, and it extrapolate distance on its own, or rely on the GPS in the paired Phone to trace your exact route. That step data comes in handy for two of the apps included on the watch: Activity and Workout. Both of the watch&#8217s fitness apps sync data back to the Health and Fitness apps on your Phone.</p>
             </div>
         </section>
-        <section class="spec section">
+        <section class="spec section" id="section__10">
             <div class="section__heading spec__header">
                 <h2 class="heading-2">Tech specs</h2>
                 <p class="heading-paragraph">Need more info? Please have a look at the tech specs of the watch. We&#8217ve used Latest technology & quality materials</p>
@@ -449,7 +421,7 @@
                 </ul>
             </div>
         </section>
-        <section class="team section">
+        <section class="team section" id="section__11">
             <div class="team__header section__heading">
                 <h2 class="heading-2">Meet the team</h2>
                 <P class="heading-paragraph">We are a small group of inverntors, hackers and designers from the differrent parts of the world on a mission.</P>
@@ -570,7 +542,7 @@
             </div>
             </div>
         </section>
-        <section class="timeline section">
+        <section class="timeline section" id="section__12">
              <div class="timeline__header section__heading">
                 <h2 class="heading-2">Timeline</h2>
                 <p class="heading-paragraph">Here&#8217s a roadmap of our product to highlight the milestones from the initial phase to delivery and future updates.</p>
@@ -629,7 +601,7 @@
                 </div>
              </div>
         </section>
-        <section class="app section">
+        <section class="app section" id="section__13">
             <img class="app__img" src="Images/app-screen.png" alt="App Download">
             <div class="app__header">
                 <div class="app__header--text">
@@ -645,7 +617,7 @@
                 
             </div>
         </section>
-        <section class="newsletter section">
+        <section class="newsletter section" id="section__14">
             <div class="newsletter__header section__heading">
                 <h2 class="heading-2">Newsletter</h2>
                 <p class="heading-paragraph">Subscribe to our product newsletter to get notified when we launch the product or when we completed a milestone</p>
@@ -662,7 +634,7 @@
                 </div>
             </form>
         </section>
-        <section class="map section">
+        <section class="map section" id="section__15">
             <div class="map__display">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3170.3385769549286!2d-122.06400902462245!3d37.381824534699135!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fb6dfd0db40f7%3A0xdd71bb02633728bf!2s523%20Sylvan%20Ave%2C%20Mountain%20View%2C%20CA%2094041%2C%20USA!5e0!3m2!1sen!2sng!4v1739449867725!5m2!1sen!2sng" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
@@ -712,7 +684,7 @@
                 
             </div>
         </section>
-        <footer class="footer">
+        <footer class="footer" id="footer">
             <div class="footer__icon">
                 <div>
                     <svg class="footer__icon--social footer_icon--facebook">
@@ -756,7 +728,33 @@
                 <p class="footer__menu--copyright">Copyright &#169;Ninetheme. Proland. All rights reserved</p>
             </div>
         </footer>
-
+        <section class="nav__responsive">
+                <ul class="nav__responsive--list">
+                    <li class="nav__responsive--list-home">
+                        <a class="nav__responsive--link" href="#header">Home</a>
+                    </li>
+                    <li class="nav__responsive--list-product">
+                        <a class="nav__responsive--link" href="#section__2">Product</a>
+                    </li>
+                    <li class="nav__responsive--list-features">
+                        <a class="nav__responsive--link" href="#section__4">Features</a>
+                    </li>
+                    <li class="nav__responsive--list-reviews">
+                        <a class="nav__responsive--link" href="#section__8">Reviews</a>
+                    </li>
+                    <li class="nav__responsive--list-contact">
+                        <a class="nav__responsive--link" href="#section__15">Contact</a>
+                    </li>
+                    <li class="nav__responsive--list-blog">
+                        <a class="nav__responsive--link" href="#blog">Blog</a>
+                    </li>
+                    <li class="nav__responsive--close">
+                        <svg >
+                            <use xlink:href="Images/Sprite.svg#icon-cross"></use>
+                        </svg>
+                    </li>     
+                </ul>
+        </section>
         <section class="popup hidden" id="popup">
                 <div class="popup__overlay"></div>
                 <div class="popup__content">
@@ -809,7 +807,7 @@
                         <use xlink:href="Images/Sprite.svg#icon-cross"></use>
                     </svg>
                 </div>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/yFFUen50XYQ?&loop=1&playlist=yFFUen50XYQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <iframe class="iframe" width="560" height="315" src="https://www.youtube.com/embed/yFFUen50XYQ?&loop=1&playlist=yFFUen50XYQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
         </section>
     </div>

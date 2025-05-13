@@ -9,6 +9,7 @@
 html {
   box-sizing: border-box;
   font-size: 80%;
+  scroll-padding-top: 6.5rem;
 }
 @media only screen and (max-width: 73.44rem) {
   html {
@@ -75,11 +76,6 @@ body {
   margin-top: 1.5rem;
 }
 
-.section__hidden {
-  opacity: 0;
-  transform: translateY(8rem);
-}
-
 .sticky {
   position: sticky;
   top: 0;
@@ -138,8 +134,8 @@ body {
   transition: all 3s;
 }
 
-.animate__pulsefade {
-  animation: doublePulse 2s infinite, fadeInRightAnimation 2s;
+.animate__fadeinright {
+  animation: fadeInRightAnimation 2s;
   transition: all 2s;
 }
 
@@ -247,12 +243,40 @@ body {
     transform: rotateY(0deg);
   }
 }
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.slide-in-right {
+  animation: slideInRight 0.5s ease-out forwards;
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(0);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(100%);
+    opacity: 1;
+  }
+}
+.slide-in-left {
+  animation: slideInLeft 0.5s ease-out forwards;
+}
+
 .header {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-  height: 6rem;
+  height: 9rem;
   background: transparent;
   padding-top: 2rem;
   z-index: 1500;
@@ -355,11 +379,14 @@ body {
   .nav__responsive {
     display: none;
     background-color: rgb(255, 255, 255);
-    z-index: 10;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 2000;
     min-width: 30rem;
-    height: 82rem;
-    align-self: self-start;
-    margin-top: -2rem;
+    height: 100vh;
+    margin-right: 0rem;
+    overflow: hidden;
   }
   .nav__responsive--list {
     display: grid;
@@ -579,12 +606,17 @@ body {
   width: 2rem;
   text-align: center;
   color: rgb(255, 255, 255);
-  z-index: 100;
+  z-index: 105;
   position: relative;
   font-size: 1.3rem;
   cursor: pointer;
-  animation: doublePulse 2s infinite, fadeInRightAnimation 2s;
+  animation: doublePulse 2s infinite;
   transition: all 2s;
+}
+@media only screen and (max-width: 26.56rem) {
+  .product__circle {
+    font-size: 1.4rem;
+  }
 }
 .product__description {
   height: 0rem;
@@ -624,14 +656,20 @@ body {
   left: 33.8rem;
   text-align: center;
 }
+@media only screen and (max-width: 48rem) {
+  .circle-1-text {
+    top: -44.25rem;
+    left: 20.8rem;
+  }
+}
 .circle-1-text::after {
   top: -1.2rem;
   right: 5rem;
 }
 @media only screen and (max-width: 48rem) {
   .circle-1-text::after {
-    top: -4.5rem;
-    left: -1.5rem;
+    top: 2.55rem;
+    left: 4.8rem;
   }
 }
 
@@ -644,14 +682,20 @@ body {
   left: -15rem;
   text-align: center;
 }
+@media only screen and (max-width: 48rem) {
+  .circle-2-text {
+    top: -39.5rem;
+    left: -1.5rem;
+  }
+}
 .circle-2-text::after {
   top: -1.2rem;
   left: 15rem;
 }
 @media only screen and (max-width: 48rem) {
   .circle-2-text::after {
-    top: -4.5rem;
-    left: -1.5rem;
+    top: 2.599rem;
+    left: 5rem;
   }
 }
 
@@ -664,14 +708,20 @@ body {
   left: 25.8rem;
   text-align: center;
 }
+@media only screen and (max-width: 48rem) {
+  .circle-3-text {
+    top: -34rem;
+    left: 13rem;
+  }
+}
 .circle-3-text::after {
   top: -1.1rem;
   left: -5rem;
 }
 @media only screen and (max-width: 48rem) {
   .circle-3-text::after {
-    top: -4.5rem;
-    left: -1.5rem;
+    top: 2.619rem;
+    left: 4.5rem;
   }
 }
 
@@ -684,14 +734,21 @@ body {
   left: -19rem;
   text-align: center;
 }
+@media only screen and (max-width: 48rem) {
+  .circle-4-text {
+    top: -26.4rem;
+    left: -5rem;
+  }
+}
 .circle-4-text::after {
   top: -1.2rem;
   left: 15rem;
+  z-index: 90;
 }
 @media only screen and (max-width: 48rem) {
   .circle-4-text::after {
-    top: -4.5rem;
-    left: -1.5rem;
+    top: 2.57rem;
+    left: 4.5rem;
   }
 }
 
@@ -2332,11 +2389,20 @@ body {
   top: 0;
   left: 0;
   z-index: 2000;
-  height: 100dvh;
+  height: 100vh;
+  width: 100%;
+  overflow-y: hidden;
 }
 @media only screen and (max-width: 48rem) {
   .popup {
+    grid-template-columns: minmax(min-content, 1fr) minmax(50rem, 1fr) minmax(min-content, 1fr);
     overflow-y: auto;
+    align-content: start;
+  }
+}
+@media only screen and (max-width: 26.56rem) {
+  .popup {
+    grid-template-columns: minmax(min-content, 1fr) minmax(45rem, 1fr) minmax(min-content, 1fr);
   }
 }
 .popup__overlay {
@@ -2344,6 +2410,17 @@ body {
   grid-row: 1/2;
   background-color: rgba(255, 255, 255, 0.5607843137);
   z-index: 2000;
+  height: 100vh;
+}
+@media only screen and (max-width: 48rem) {
+  .popup__overlay {
+    height: 165vh;
+  }
+}
+@media only screen and (max-width: 26.56rem) {
+  .popup__overlay {
+    height: 114vh;
+  }
 }
 .popup__content {
   grid-column: 2/3;
@@ -2353,23 +2430,25 @@ body {
   justify-self: center;
   align-self: center;
   z-index: 2100;
-  height: 46rem;
+  max-width: 100%;
   box-shadow: 2rem 2rem 10rem -5rem;
+  position: relative;
 }
 @media only screen and (max-width: 48rem) {
   .popup__content {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(20rem, 1fr);
+    align-self: self-start;
   }
 }
 .popup__content img {
   display: flex;
   justify-self: center;
   align-self: center;
-  width: 60%;
+  max-width: 60%;
 }
 @media only screen and (max-width: 48rem) {
   .popup__content img {
-    width: 45%;
+    max-width: 50%;
   }
 }
 .popup__image {
@@ -2379,6 +2458,7 @@ body {
   background-color: #efeded;
   min-width: 100%;
   height: 48rem;
+  z-index: 2100;
 }
 @media only screen and (max-width: 48rem) {
   .popup__image {
@@ -2387,13 +2467,15 @@ body {
 }
 .popup__description {
   display: grid;
-  grid-template-rows: repeat(4, 11.2rem);
+  grid-template-rows: repeat(3, 10.9rem);
   padding: 3rem 3rem 0rem 3rem;
   background-color: rgb(255, 255, 255);
   height: 48rem;
+  position: relative;
 }
 @media only screen and (max-width: 48rem) {
   .popup__description {
+    grid-template-rows: 11.5rem repeat(3, 10.1rem);
     grid-row: 2/3;
   }
 }
@@ -2474,6 +2556,7 @@ body {
   grid-template-rows: 6rem;
   gap: 1rem;
   align-content: center;
+  position: relative;
 }
 .popup__description3 #color_black,
 .popup__description3 #color_green,
@@ -2530,10 +2613,21 @@ body {
 }
 .popup__cross {
   position: relative;
-  bottom: 45rem;
+  bottom: 40rem;
   left: 28rem;
   width: 1rem;
   height: 1rem;
+}
+@media only screen and (max-width: 48rem) {
+  .popup__cross {
+    position: absolute;
+    bottom: 47rem;
+    top: -46rem;
+    left: 44rem;
+    width: 2rem;
+    height: 3rem;
+    z-index: 2101;
+  }
 }
 
 .video {
