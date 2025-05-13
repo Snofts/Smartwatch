@@ -244,37 +244,37 @@ navResList.addEventListener('click', function(e){
 
 
 // Reveal Each Section
-const revealSection = function(entries, observer){
-  const [entry] = entries;
-  if (!entry.isIntersecting) return;
+// const revealSection = function(entries, observer){
+//   const [entry] = entries;
+//   if (!entry.isIntersecting) return;
 
-  // Add doublepulse animation when the product section comes into view
-  if(entry.target.classList.contains('product')) {
-    productCircles.forEach((el) => {
-      el.classList.add('animate__fadeiright');
-      console.log('fade in right')
-    })
-  } else {
-    productCircles.forEach((el) => {
-      el.classList.add('animate__fadeinright');
-      console.log('fade in right')
-    })
-    console.log('fade in removed')
-  }
+//   // Add doublepulse animation when the product section comes into view
+//   if(entry.target.classList.contains('product')) {
+//     productCircles.forEach((el) => {
+//       el.classList.add('animate__fadeiright');
+//       console.log('fade in right')
+//     })
+//   } else {
+//     productCircles.forEach((el) => {
+//       el.classList.add('animate__fadeinright');
+//       console.log('fade in right')
+//     })
+//     console.log('fade in removed')
+//   }
     
-  entry.target.classList.remove('section__hidden');
-  observer.unobserve(entry.target);
-}
+//   entry.target.classList.remove('section__hidden');
+//   observer.unobserve(entry.target);
+// }
 
-const sectionObserver = new IntersectionObserver(revealSection, {
-  root: null,
-  threshold: 0.20
-});
+// const sectionObserver = new IntersectionObserver(revealSection, {
+//   root: null,
+//   threshold: 0.20
+// });
 
-allSection.forEach(section => {
-  sectionObserver.observe(section);
-  section.classList.add("section__hidden")
-});
+// allSection.forEach(section => {
+//   sectionObserver.observe(section);
+//   section.classList.add("section__hidden")
+// });
 
 
 
