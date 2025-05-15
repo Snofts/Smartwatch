@@ -24,6 +24,11 @@
             // autoplay: 1;
 
             @media only screen and (max-width: i.$bp-medium){
+                width: 70rem;
+                height: 38rem;
+            }
+
+            @media only screen and (max-width: i.$bp-small){
                 width: 50rem;
                 height: 38rem;
             }
@@ -40,12 +45,13 @@
             fill: i.$color-heading-black;
             justify-self: end;
             margin-bottom: 2rem;
-
+            position: absolute;
+            top: 6rem;
+            right: 4rem;
 
             @media only screen and (max-width: i.$bp-micro){
                 margin: 0rem 3rem 3rem 0rem;
-                position: absolute;
-                top: 0rem;
+                top: 20rem;
                 right: 0rem;
             }
         }

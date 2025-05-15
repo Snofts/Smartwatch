@@ -64,7 +64,7 @@
 
         @media only screen and (max-width: i.$bp-medium){
             grid-template-columns: minmax(20rem, 1fr);
-            align-self: self-start;
+            align-self: center;
             // grid-template-rows: 55rem 35rem;
             // overflow-y: auto;
         }

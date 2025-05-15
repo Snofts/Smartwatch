@@ -2441,7 +2441,7 @@ body {
 @media only screen and (max-width: 48rem) {
   .popup__content {
     grid-template-columns: minmax(20rem, 1fr);
-    align-self: self-start;
+    align-self: center;
   }
 }
 .popup__content img {
@@ -2678,6 +2678,12 @@ body {
 }
 @media only screen and (max-width: 48rem) {
   .video__content iframe {
+    width: 70rem;
+    height: 38rem;
+  }
+}
+@media only screen and (max-width: 36rem) {
+  .video__content iframe {
     width: 50rem;
     height: 38rem;
   }
@@ -2690,12 +2696,14 @@ body {
   fill: black;
   justify-self: end;
   margin-bottom: 2rem;
+  position: absolute;
+  top: 6rem;
+  right: 4rem;
 }
 @media only screen and (max-width: 26.56rem) {
   .video__cross svg {
     margin: 0rem 3rem 3rem 0rem;
-    position: absolute;
-    top: 0rem;
+    top: 20rem;
     right: 0rem;
   }
 }
