@@ -41,8 +41,12 @@
             justify-self: end;
             margin-bottom: 2rem;
 
+
             @media only screen and (max-width: i.$bp-micro){
                 margin: 0rem 3rem 3rem 0rem;
+                position: absolute;
+                top: 0rem;
+                right: 0rem;
             }
         }
     }

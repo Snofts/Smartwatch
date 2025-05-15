@@ -4,7 +4,7 @@
 .popup{
     display: grid;
     grid-template-columns: minmax(0rem, 1fr) minmax(70rem, 1fr) minmax(0rem, 1fr);
-    grid-template-rows: 55rem;
+    grid-template-rows: auto;
     align-content: center;
     position: fixed;
     top: 0;
@@ -33,9 +33,13 @@
         background-color: i.$color-popup-overlay;
         z-index: 2000;
         height: 100vh;
+        align-self: self-start;
+        position: relative;
+        top: 0rem;
+        left: 0rem;
         
         @media only screen and (max-width: i.$bp-medium){
-            height: 247vh;
+            height: 168vh;
         }
     
         @media only screen and (max-width: i.$bp-micro){

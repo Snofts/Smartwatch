@@ -2383,7 +2383,7 @@ body {
 .popup {
   display: grid;
   grid-template-columns: minmax(0rem, 1fr) minmax(70rem, 1fr) minmax(0rem, 1fr);
-  grid-template-rows: 55rem;
+  grid-template-rows: auto;
   align-content: center;
   position: fixed;
   top: 0;
@@ -2411,10 +2411,14 @@ body {
   background-color: rgba(255, 255, 255, 0.5607843137);
   z-index: 2000;
   height: 100vh;
+  align-self: self-start;
+  position: relative;
+  top: 0rem;
+  left: 0rem;
 }
 @media only screen and (max-width: 48rem) {
   .popup__overlay {
-    height: 247vh;
+    height: 168vh;
   }
 }
 @media only screen and (max-width: 26.56rem) {
@@ -2690,6 +2694,9 @@ body {
 @media only screen and (max-width: 26.56rem) {
   .video__cross svg {
     margin: 0rem 3rem 3rem 0rem;
+    position: absolute;
+    top: 0rem;
+    right: 0rem;
   }
 }
 
